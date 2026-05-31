@@ -175,9 +175,13 @@
   .flex-card li { font-size: 13px; color: var(--gray-700); margin: 4px 0; }
 
   .stretch-grid { display: grid; gap: 8px; margin: 12px 0; }
-  .stretch-item { background: white; border-right: 3px solid var(--green); padding: 10px 12px; border-radius: 6px; font-size: 14px; color: var(--gray-700); }
+  .stretch-item { background: white; border-right: 3px solid var(--green); padding: 10px 12px; border-radius: 6px; font-size: 14px; color: var(--gray-700); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .stretch-item .body { flex: 1; min-width: 0; }
   .stretch-item strong { color: var(--gray-900); }
   .stretch-item .qty { color: var(--orange); font-weight: 700; font-size: 13px; }
+  .stretch-item .watch { background: var(--red); color: white; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .stretch-item .watch:hover { background: #dc2626; }
+  .stretch-item .watch::before { content: "▶"; font-size: 10px; }
 
   .checklist { list-style: none; padding: 0; }
   .checklist li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px dashed var(--gray-200); align-items: flex-start; }
@@ -465,22 +469,46 @@
 
     <h3>רגליים (5 דק') — חשוב גם לברך</h3>
     <div class="stretch-grid">
-      <div class="stretch-item"><strong>מתיחת קוואדריצפס בעמידה</strong> — אחז קרסול, משוך עקב לישבן, אגן קדימה. <span class="qty">30 שנ' × 2 לכל רגל</span></div>
-      <div class="stretch-item"><strong>גב-ירך עומדת</strong> — רגל מושטת על כיסא/ספסל, מתכופף מהאגן (גב ישר). <span class="qty">30 שנ' × 2 לכל רגל</span></div>
-      <div class="stretch-item"><strong>Hip Flexor Lunge</strong> — צעד גדול קדימה, ברך אחורית לרצפה, אגן דוחף קדימה. <span class="qty">30 שנ' × 2 לכל רגל</span> <em style="color:var(--orange);font-size:12px;">— הכי חשוב למישהו שיושב 10 שעות ביום.</em></div>
-      <div class="stretch-item"><strong>מתיחת תאומים בקיר</strong> — ידיים על קיר, רגל אחורה ישרה, עקב לוחץ לרצפה. <span class="qty">30 שנ' לכל רגל</span></div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת קוואדריצפס בעמידה</strong> — אחז קרסול, משוך עקב לישבן, אגן קדימה. <span class="qty">30 שנ' × 2 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=standing+quadriceps+stretch+proper+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>גב-ירך עומדת</strong> — רגל מושטת על כיסא/ספסל, מתכופף מהאגן (גב ישר). <span class="qty">30 שנ' × 2 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=standing+hamstring+stretch+on+bench" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Hip Flexor Lunge</strong> — צעד גדול קדימה, ברך אחורית לרצפה, אגן דוחף קדימה. <span class="qty">30 שנ' × 2 לכל רגל</span> <em style="color:var(--orange);font-size:12px;">— הכי חשוב למישהו שיושב 10 שעות ביום.</em></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=kneeling+hip+flexor+lunge+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת תאומים בקיר</strong> — ידיים על קיר, רגל אחורה ישרה, עקב לוחץ לרצפה. <span class="qty">30 שנ' לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=calf+stretch+against+wall" target="_blank">הדגמה</a>
+      </div>
     </div>
 
     <h3>גב + חזה + כתפיים (3 דק') — נגד שעות מול מחשב</h3>
     <div class="stretch-grid">
-      <div class="stretch-item"><strong>Doorway chest stretch</strong> — יד במשקוף, סובב את הגוף הצידה. <span class="qty">30 שנ' × 2 לכל צד</span> <em style="color:var(--orange);font-size:12px;">— חובה. הכתפיים שלך נסגרות פנימה מהמחשב.</em></div>
-      <div class="stretch-item"><strong>Cat-Cow</strong> — על ארבע, גב עולה ויורד. <span class="qty">10 חזרות איטיות</span></div>
-      <div class="stretch-item"><strong>Thoracic rotation בישיבה</strong> — יושב, יד אחת על הראש, סובב את החזה הצידה. <span class="qty">5 לכל צד</span></div>
+      <div class="stretch-item">
+        <div class="body"><strong>Doorway chest stretch</strong> — יד במשקוף, סובב את הגוף הצידה. <span class="qty">30 שנ' × 2 לכל צד</span> <em style="color:var(--orange);font-size:12px;">— חובה. הכתפיים שלך נסגרות פנימה מהמחשב.</em></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=doorway+chest+stretch+pec+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Cat-Cow</strong> — על ארבע, גב עולה ויורד. <span class="qty">10 חזרות איטיות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=cat+cow+stretch+yoga+spine" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Thoracic rotation בישיבה</strong> — יושב, יד אחת על הראש, סובב את החזה הצידה. <span class="qty">5 לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=seated+thoracic+rotation+stretch+desk" target="_blank">הדגמה</a>
+      </div>
     </div>
 
     <h3>ישבן + אגן (2 דק')</h3>
     <div class="stretch-grid">
-      <div class="stretch-item"><strong>Pigeon stretch / חצי יונה</strong> — רגל קדמית כפופה לפניך, אחורית מתוחה מאחור. <span class="qty">45 שנ' לכל צד</span></div>
+      <div class="stretch-item">
+        <div class="body"><strong>Pigeon stretch / חצי יונה</strong> — רגל קדמית כפופה לפניך, אחורית מתוחה מאחור. <span class="qty">45 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=pigeon+pose+stretch+yoga+beginner" target="_blank">הדגמה</a>
+      </div>
     </div>
 
     <div class="callout">
