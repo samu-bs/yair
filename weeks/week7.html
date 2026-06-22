@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שבוע 7 · יוסי · 23 – 29 ביוני 2026</title>
+<style>
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #0f172a;
+    --orange: #f97316;
+    --orange-light: #fef3e8;
+    --green: #10b981;
+    --green-light: #ecfdf5;
+    --yellow: #ca8a04;
+    --yellow-light: #fef9c3;
+    --red: #ef4444;
+    --red-light: #fef2f2;
+    --purple: #7c3aed;
+    --purple-light: #f5f3ff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-500: #64748b;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, "Open Sans Hebrew", "Heebo", sans-serif;
+    color: var(--gray-900);
+    font-size: 16px;
+    line-height: 1.6;
+    direction: rtl;
+    background: #fafafa;
+    padding-bottom: 60px;
+  }
+
+  nav.topnav { position: sticky; top: 0; z-index: 100; background: var(--navy); color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .nav-toggle { display: none; }
+  .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; max-width: 760px; margin: 0 auto; }
+  .nav-brand { color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .nav-brand .accent { color: var(--orange); }
+  .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; border-radius: 6px; }
+  .hamburger span { display: block; width: 24px; height: 2.5px; background: white; border-radius: 2px; transition: transform 0.2s, opacity 0.2s; }
+  .nav-links { display: flex; gap: 4px; align-items: center; }
+  nav.topnav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: background 0.15s; }
+  nav.topnav a:hover, nav.topnav a:active { background: rgba(255,255,255,0.15); }
+
+  @media (max-width: 720px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; align-items: stretch; padding: 8px 12px 14px; gap: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.1); }
+    .nav-toggle:checked ~ .nav-bar .nav-links { display: flex; }
+    .nav-toggle:checked ~ .nav-bar .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle:checked ~ .nav-bar .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-bar .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    nav.topnav a { padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    nav.topnav a:last-child { border-bottom: none; }
+  }
+
+  .quick-actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0 8px; }
+  @media (min-width: 560px) { .quick-actions { grid-template-columns: repeat(4, 1fr); } }
+  .quick-actions a { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; padding: 16px 10px; border-radius: 10px; background: white; border: 1px solid var(--gray-200); color: var(--gray-900); transition: transform 0.1s, box-shadow 0.15s; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .quick-actions a:hover, .quick-actions a:active { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .quick-actions a .qa-icon { font-size: 24px; margin-bottom: 4px; }
+  .quick-actions a .qa-label { font-weight: 700; font-size: 13px; color: var(--navy); }
+  .quick-actions a .qa-sub { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+  .quick-actions a.workout { border-right: 4px solid var(--navy); }
+  .quick-actions a.menu { border-right: 4px solid var(--green); }
+  .quick-actions a.sleep { border-right: 4px solid var(--purple); }
+  .quick-actions a.party { border-right: 4px solid var(--orange); }
+  .quick-actions a.blood { border-right: 4px solid var(--red); }
+
+  .week-table tr.clickable td a.row-link { color: inherit; text-decoration: none; display: block; margin: -10px -12px; padding: 10px 12px; }
+  .week-table tr.clickable { cursor: pointer; transition: background 0.1s; }
+  .week-table tr.clickable:hover { background: var(--gray-50); }
+  .week-table tr.clickable td:last-child::after { content: " ›"; color: var(--orange); font-weight: 700; margin-right: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
+
+  .hero { padding: 32px 0 24px; border-bottom: 1px solid var(--gray-200); margin-bottom: 24px; }
+  .hero .eyebrow { color: var(--gray-500); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .hero h1 { color: var(--navy); font-size: 36px; line-height: 1.1; margin-bottom: 4px; }
+  .hero .dates { color: var(--gray-500); font-size: 18px; margin-bottom: 18px; }
+  .hero .accent-bar { width: 50px; height: 4px; background: var(--orange); margin-bottom: 18px; }
+  .hero .lead { color: var(--gray-700); font-size: 15px; line-height: 1.65; }
+
+  .number-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0; }
+  @media (min-width: 560px) { .number-grid { grid-template-columns: repeat(4, 1fr); } }
+  .num-box { background: var(--navy); color: white; padding: 14px 10px; text-align: center; border-radius: 8px; }
+  .num-box .v { font-size: 22px; font-weight: 700; line-height: 1.1; }
+  .num-box .l { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+  .num-box.success { background: var(--green); }
+
+  section { scroll-margin-top: 60px; margin-bottom: 36px; }
+  section h2 { color: var(--navy); font-size: 24px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--navy); }
+  section h3 { color: var(--gray-900); font-size: 18px; margin: 16px 0 8px; }
+  section p { margin-bottom: 10px; color: var(--gray-700); }
+
+  .progress-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-top: 8px; }
+  .progress-table th, .progress-table td { text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--gray-200); }
+  .progress-table th { background: var(--gray-100); font-weight: 700; font-size: 13px; color: var(--gray-700); }
+  .progress-table td:first-child { font-weight: 700; color: var(--gray-900); }
+  .progress-table .delta-good { color: var(--green); font-weight: 700; }
+  .progress-table .delta-neutral { color: var(--gray-500); }
+  .progress-table .delta-bad { color: var(--red); font-weight: 700; }
+
+  .blood-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-top: 8px; }
+  .blood-table th, .blood-table td { text-align: right; padding: 9px 12px; border-bottom: 1px solid var(--gray-200); }
+  .blood-table th { background: var(--gray-100); font-weight: 700; font-size: 13px; color: var(--gray-700); }
+  .blood-table td:first-child { font-weight: 700; color: var(--gray-900); }
+  .blood-table .v { font-weight: 700; }
+  .blood-table .st { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .blood-table .st.ok { background: var(--green-light); color: #065f46; }
+  .blood-table .st.watch { background: var(--orange-light); color: #9a3412; }
+  .blood-table .st.high { background: var(--red-light); color: #b91c1c; }
+
+  .week-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .week-table th, .week-table td { text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--gray-200); }
+  .week-table th { background: var(--gray-100); font-weight: 700; font-size: 13px; color: var(--gray-700); }
+  .week-table td:first-child { font-weight: 700; color: var(--gray-900); }
+  .week-table tr.workout td:first-child { color: var(--navy); }
+  .week-table tr.basketball td:first-child { color: var(--orange); }
+  .week-table tr.cardio td:first-child { color: var(--green); }
+  .week-table tr.rest td { color: var(--gray-500); }
+
+  .callout { padding: 14px 16px; margin: 14px 0; border-radius: 8px; background: var(--gray-50); border-right: 4px solid var(--navy); }
+  .callout.orange { background: var(--orange-light); border-right-color: var(--orange); }
+  .callout.green { background: var(--green-light); border-right-color: var(--green); }
+  .callout.yellow { background: var(--yellow-light); border-right-color: var(--yellow); }
+  .callout.red { background: var(--red-light); border-right-color: var(--red); }
+  .callout.purple { background: var(--purple-light); border-right-color: var(--purple); }
+  .callout h4 { font-size: 15px; margin-bottom: 6px; color: var(--gray-900); }
+  .callout p { font-size: 14px; margin: 0 0 6px 0; color: var(--gray-700); }
+  .callout ul { padding-right: 18px; }
+  .callout li { font-size: 14px; color: var(--gray-700); margin: 3px 0; }
+
+  .workout-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+  .workout-meta .chip { background: var(--gray-100); color: var(--gray-700); padding: 5px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+  .workout-meta .chip.primary { background: var(--navy); color: white; }
+  .workout-meta .chip.warning { background: var(--orange-light); color: #9a3412; }
+  .workout-meta .chip.success { background: var(--green-light); color: #065f46; }
+
+  .exercise { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .exercise.replaced { border-right: 4px solid var(--orange); }
+  .exercise.new-this-week { border-right: 4px solid var(--green); }
+  .exercise.progressed { border-right: 4px solid var(--navy); }
+  .exercise.hold { border-right: 4px solid var(--yellow); }
+  .exercise-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+  .exercise-name { font-size: 16px; font-weight: 700; color: var(--gray-900); flex: 1; }
+  .exercise-name .en { font-size: 12px; color: var(--gray-500); font-weight: 500; display: block; margin-top: 2px; }
+  .exercise-name .badge { display: inline-block; background: var(--orange); color: white; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; vertical-align: middle; margin-right: 4px; }
+  .exercise-name .badge.new { background: var(--green); }
+  .exercise-name .badge.up { background: var(--navy); }
+  .exercise-name .badge.hold { background: var(--yellow); }
+  .exercise-number { background: var(--navy); color: white; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .exercise-stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0; font-size: 14px; }
+  .exercise-stats .stat { display: flex; flex-direction: column; }
+  .exercise-stats .stat .label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+  .exercise-stats .stat .value { font-size: 15px; font-weight: 700; color: var(--orange); }
+  .exercise-cues { background: var(--gray-50); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 13px; color: var(--gray-700); }
+  .exercise-cues strong { color: var(--gray-900); }
+  .exercise-cues ul { padding-right: 16px; margin: 4px 0; }
+  .exercise-cues li { margin: 3px 0; }
+  .weight-note { display: block; font-size: 11px; color: var(--gray-500); margin-top: 2px; font-weight: 500; }
+  .demo-button { display: inline-flex; align-items: center; gap: 6px; background: var(--red); color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-top: 6px; }
+  .demo-button:hover { background: #dc2626; }
+  .demo-button .icon { width: 16px; height: 16px; fill: white; }
+
+  .meal { background: white; border: 1px solid var(--gray-200); border-right: 4px solid var(--green); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .meal.dinner { border-right-color: var(--orange); }
+  .meal.new-spot { border-right-color: var(--yellow); }
+  .meal-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; align-items: baseline; margin-bottom: 6px; }
+  .meal-name { font-weight: 700; color: var(--gray-900); font-size: 15px; }
+  .meal-name .time { color: var(--gray-500); font-weight: 500; font-size: 13px; margin-right: 6px; }
+  .meal-macros { font-size: 12px; color: var(--navy); font-weight: 700; background: var(--gray-100); padding: 3px 8px; border-radius: 12px; }
+  .meal ul { padding-right: 16px; margin: 6px 0; }
+  .meal li { font-size: 14px; margin: 3px 0; color: var(--gray-700); }
+  .meal .recipe { font-size: 13px; color: var(--gray-700); background: var(--gray-50); padding: 8px 12px; border-radius: 6px; margin-top: 6px; }
+  .meal .recipe strong { color: var(--gray-900); }
+  .meal .variations { font-size: 12px; color: var(--gray-500); font-style: italic; margin-top: 6px; }
+
+  .stretch-grid { display: grid; gap: 8px; margin: 12px 0; }
+  .stretch-item { background: white; border-right: 3px solid var(--green); padding: 10px 12px; border-radius: 6px; font-size: 14px; color: var(--gray-700); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .stretch-item.warm { border-right-color: var(--orange); }
+  .stretch-item.release { border-right-color: var(--purple); }
+  .stretch-item .body { flex: 1; min-width: 0; }
+  .stretch-item strong { color: var(--gray-900); }
+  .stretch-item .qty { color: var(--orange); font-weight: 700; font-size: 13px; }
+  .stretch-item .watch { background: var(--red); color: white; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .stretch-item .watch:hover { background: #dc2626; }
+  .stretch-item .watch::before { content: "▶"; font-size: 10px; }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px dashed var(--gray-200); align-items: flex-start; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .check { width: 18px; height: 18px; border: 2px solid var(--navy); border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+  .checklist .content { flex: 1; }
+  .checklist .title { font-weight: 700; font-size: 15px; color: var(--gray-900); }
+  .checklist .desc { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
+  .checklist .due { display: inline-block; font-size: 11px; color: var(--orange); font-weight: 700; margin-right: 6px; background: var(--orange-light); padding: 2px 8px; border-radius: 10px; }
+
+  .question { background: var(--yellow-light); border-right: 3px solid var(--yellow); padding: 12px 14px; margin: 10px 0; border-radius: 6px; }
+  .question .q-label { font-size: 11px; color: #854d0e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .question .q-text { font-size: 14px; color: var(--gray-700); }
+
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--gray-200); text-align: right; color: var(--gray-500); font-size: 13px; }
+  .footer strong { color: var(--gray-900); }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <div class="nav-bar">
+    <a href="../index.html" class="nav-brand">← שבוע <span class="accent">7</span> · יוסי</a>
+    <label for="nav-toggle" class="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </label>
+    <div class="nav-links">
+      <a href="#hero">🏠 בית</a>
+      <a href="#progress">📈 התקדמות</a>
+      <a href="#blood">🩸 בדיקות דם</a>
+      <a href="#schedule">📅 שבוע</a>
+      <a href="#back">🎯 שחרור גב</a>
+      <a href="#workout-a">💪 A</a>
+      <a href="#workout-b">💪 B</a>
+      <a href="#workout-c">💪 C</a>
+      <a href="#menu">🍽 תפריט</a>
+      <a href="#habits">✅ הרגלים</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="eyebrow">תוכנית אישית · שבוע 7</div>
+    <h1>יוסי בן שושן</h1>
+    <div class="dates">23 – 29 ביוני 2026</div>
+    <div class="accent-bar"></div>
+    <p class="lead">
+      שבוע טוב, ואני אגיד לך גם את החלק הפחות זוהר — כי אתה רוצה אמת, לא מחמאות. <strong>האימונים מצוינים:</strong> ה-CSV מראה שדחפת קדימה כמעט בכל תרגיל — חתירה ל-50, חתירת כבל ל-80, RDL ל-62.5, פלאנק 90. <strong>זה בדיוק מה שבונה שריר.</strong> מצד שני, <strong>המשקל (87.3) וההיקפים (בטן 95, מותן 95) עומדים במקום כבר כ-3 שבועות.</strong> זה לא כישלון — זה סימן שהגוף הסתגל לגירעון, וזה הזמן הטבעי לכוונון קטן. עשינו אותו: <strong>קיצוץ עדין בקלוריות + הורדת 2 קפוצ'ינו ביום</strong> (שני דברים באותו מהלך). בנוסף — <strong>קיבלתי את בדיקות הדם, ויש מקטע חדש שמפרק אותן</strong> (רובן מצוינות, יש שתיים לעבוד עליהן), ובניתי לך <strong>רוטינת שחרור לגולה בגב</strong> שדיווחת עליה. שבוע של דיוק, לא של מהפכה.
+    </p>
+
+    <div class="number-grid">
+      <div class="num-box"><div class="v">2250</div><div class="l">קלוריות / יום</div></div>
+      <div class="num-box"><div class="v">185g</div><div class="l">חלבון</div></div>
+      <div class="num-box"><div class="v">70g</div><div class="l">שומן</div></div>
+      <div class="num-box"><div class="v">215g</div><div class="l">פחמימה</div></div>
+    </div>
+  </section>
+
+  <!-- QUICK ACTIONS -->
+  <div class="quick-actions">
+    <a href="#workout-a" class="workout">
+      <span class="qa-icon">💪</span>
+      <span class="qa-label">אימון A</span>
+      <span class="qa-sub">Push · שלישי</span>
+    </a>
+    <a href="#workout-b" class="workout">
+      <span class="qa-icon">💪</span>
+      <span class="qa-label">אימון B</span>
+      <span class="qa-sub">Pull · חמישי</span>
+    </a>
+    <a href="#workout-c" class="workout">
+      <span class="qa-icon">💪</span>
+      <span class="qa-label">אימון C</span>
+      <span class="qa-sub">Legs · שבת</span>
+    </a>
+    <a href="#blood" class="blood">
+      <span class="qa-icon">🩸</span>
+      <span class="qa-label">בדיקות דם</span>
+      <span class="qa-sub">קריאה + מסקנות</span>
+    </a>
+  </div>
+
+  <!-- PROGRESS -->
+  <section id="progress">
+    <h2>📈 התקדמות שבוע 5 → שבוע 6</h2>
+    <p>שבוע 6 היה <strong>שבוע אימונים מצוין</strong> — דחפת עומסים קדימה כמעט בכל תרגיל. אבל זה גם השבוע שבו <strong>המשקל וההיקפים יושבים במקום</strong>, וזה משהו שאני לוקח ברצינות כי המספרים היורדים הם מה שמחזיק אותך. בוא נסתכל בעיניים פקוחות.</p>
+
+    <table class="progress-table">
+      <thead>
+        <tr><th>מדד</th><th>בסיס (11/5)</th><th>שבוע 5</th><th>שבוע 6 (22/6)</th><th>שינוי כולל</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>משקל בוקר</td>
+          <td>89.0</td>
+          <td>87.2</td>
+          <td>87.3</td>
+          <td class="delta-good">−1.7 ק"ג</td>
+        </tr>
+        <tr>
+          <td>היקף בטן</td>
+          <td>101</td>
+          <td>95.0</td>
+          <td>95.0</td>
+          <td class="delta-good">−6.0 ס"מ 🎯</td>
+        </tr>
+        <tr>
+          <td>היקף מותניים</td>
+          <td>95</td>
+          <td>94</td>
+          <td>95</td>
+          <td class="delta-neutral">0 ס"מ</td>
+        </tr>
+        <tr>
+          <td>פער בטן−מותן</td>
+          <td>6.0</td>
+          <td>1.0</td>
+          <td>0.0</td>
+          <td class="delta-good">−6.0 ס"מ 🔥</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <h4>איך לקרוא את זה נכון — שתי אמיתות במקביל</h4>
+      <p><strong>אמת ראשונה, החיובית:</strong> מההתחלה ירדת 1.7 ק"ג ו-6 ס"מ בבטן, והפער בטן-מותן נסגר לחלוטין (היה 6, עכשיו 0). זה אומר שהשומן הבטני — בדיוק היעד שלך — באמת יורד. <strong>אמת שנייה, שצריך לשים על השולחן:</strong> ב-3 השבועות האחרונים המשקל זז ב-100 גרם והבטן לא זזה. זה <strong>פלאטו קלאסי</strong> — הגוף התרגל ל-2400 קלוריות. זה קורה לכולם בשלב הזה, וזה לא סימן שמשהו שבור. זה סימן שצריך כוונון קטן.</p>
+    </div>
+
+    <div class="callout orange">
+      <h4>המהלך של השבוע — כוונון כפול (ולמה דווקא ככה)</h4>
+      <p>התייעצתי עם יואב, ובמקום לחתוך קלוריות באכזריות (שזה מה ששובר תוכניות), עשינו מהלך אחד חכם שפותר שתי בעיות בבת אחת:</p>
+      <ul>
+        <li><strong>מורידים 2 קפוצ'ינו ביום (מ-4 ל-2).</strong> זה לבדו חותך ~200 קלוריות של חלב — וזה מה שמוריד אותנו מ-2400 ל-2250. בלי לגעת באוכל "האמיתי", בלי רעב.</li>
+        <li><strong>אותו מהלך משרת גם את בדיקות הדם</strong> (ראה מקטע בדיקות דם) — חלב מלא הוא מקור לשומן רווי, ויש לנו סיבה טובה לצמצם אותו השבוע.</li>
+        <li><strong>מעלים את הצעדים ל-9,000–10,000.</strong> ה-NEAT שלך נמוך (יושב כל היום), וזה המקום הכי קל להוציא ממנו עוד 100–150 קלוריות ביום בלי "אימון" נוסף.</li>
+      </ul>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— יואב, בתיאום עם עמית</p>
+    </div>
+
+    <div class="callout">
+      <h4>ביצועי אימון שבוע 6 — מתוך ה-Hevy (שבוע חזק מאוד)</h4>
+      <ul>
+        <li><strong>Push A (17/6):</strong> לחיצת חזה 50×10,10,10,11 (כמעט 4×12!), <strong>Incline DB עלה ל-24</strong> (10,9,7), <strong>לחיצת כתפיים 16</strong> (10,7,10 — מבוסס), Triceps 28.75 (12,10,12), Plank 90×3. חזה וכתפיים ממשיכים לטפס.</li>
+        <li><strong>Pull B (19/6):</strong> <strong>חתירה במוט קפצה ל-50</strong> (12,10,10,10 — מעולה!), <strong>חתירת כבל סגרת 80×10</strong> (רשמת "אין 72.5, הקפיצה היא 80" — קיבלתי), Face Pull 28.75, Hammer 16. גב מתפוצץ קדימה.</li>
+        <li><strong>Legs C (20/6):</strong> <strong>RDL עלה ל-62.5</strong> (10×4 נקי), Leg Press 100×12×4 חלק, Leg Curl 50, Cable Crunch 36.25, Plank 90. סקוואט 40 ורשמת <strong>"היה קל"</strong> — מעולה, זה הסימן שחיכיתי לו.</li>
+        <li style="color:var(--orange);"><strong>Lat Pulldown — התובנה שלך:</strong> רשמת "צריך להתחיל איתו, הוא היה רביעי וכבר הייתי עייף". <strong>צודק ב-100%.</strong> בשבוע 7 הוא עובר להיות התרגיל הראשון באימון B. ראה למטה.</li>
+      </ul>
+    </div>
+
+    <div class="callout green">
+      <h4>הכיוון נכון — והאימונים מוכיחים את זה</h4>
+      <p>זה מה שחשוב להבין: <strong>גם כשהמשקל עומד, אתה מתחזק.</strong> חתירה מ-45 ל-50, חתירת כבל מ-70 ל-80, RDL מ-60 ל-62.5 — אלה לא מספרים אקראיים, זה שריר שנבנה. וכשבונים שריר תוך כדי גירעון, השומן שיורד נראה הרבה יותר טוב על הגוף. <strong>הפלאטו במשקל הוא זמני; השריר שאתה צובר נשאר.</strong> הכוונון הקטן השבוע יחזיר את המחט לזוז.</p>
+    </div>
+  </section>
+
+  <!-- BLOOD TESTS -->
+  <section id="blood">
+    <h2>🩸 בדיקות דם — 21/6/2026</h2>
+    <p>שלחת את הבדיקות (מכבי, 21/6) וביקשת להשוות לקודמות. <strong>נקודה חשובה לפני הכל:</strong> אין לי בתיק בדיקות דם קודמות שלך להשוואת מגמה — אז עברתי על הערכים מול <strong>טווחי הייחוס</strong> של המעבדה. אם יש לך בדיקה ישנה (אפילו מלפני שנה-שנתיים) — שלח, ואשווה לך מגמה אמיתית, זה הרבה יותר שווה ממספר בודד. התייעצתי עם ד"ר אסף, וזו הקריאה שלו.</p>
+
+    <div class="callout green">
+      <h4>✅ החדשות הטובות — וזה רוב התמונה</h4>
+      <p>הרוב המוחלט של הבדיקה <strong>נקי ומצוין</strong>, וחלק מהערכים הם בדיוק מה שהיינו רוצים לראות אצל מישהו בתהליך:</p>
+      <ul>
+        <li><strong>סוכר תקין לחלוטין:</strong> גלוקוז 92, HbA1c 5.6% — לא סוכרתי, לא טרום-סוכרתי. מצוין.</li>
+        <li><strong>טריגליצרידים 75</strong> (תקין &lt;150) — <strong>ערך מעולה.</strong> זה מדד רגיש לתזונה ולשומן בטני, וזה אומר שמה שאתה עושה עובד.</li>
+        <li><strong>כבד, כליות, ספירת דם — הכל בטווח:</strong> ALT/AST 22, תפקוד כליה (eGFR 83) תקין, המוגלובין 14.4, פריטין 181 (מאגרי ברזל מצוינים), TSH 1.42 (בלוטת התריס תקינה).</li>
+      </ul>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— ד"ר אסף</p>
+    </div>
+
+    <div class="callout orange">
+      <h4>🟠 שני ערכים לעבוד עליהם — פרופיל השומנים</h4>
+      <p>יש דבר אחד שכן דורש תשומת לב, ואני שם אותו על השולחן בלי לעגל פינות: <strong>פרופיל הכולסטרול.</strong></p>
+      <ul>
+        <li><strong>LDL ("הרע") 162</strong> — מעל המומלץ (&lt;130). זה הערך המרכזי לעבוד עליו.</li>
+        <li><strong>HDL ("הטוב") 33</strong> — מתחת למומלץ (&gt;40). רוצים שהוא יעלה.</li>
+        <li><strong>כולסטרול כללי 210</strong> (מומלץ &lt;200) — מעט גבוה, נגרר מהשניים מעל.</li>
+      </ul>
+      <p>ההקשר חשוב: <strong>אין לך היסטוריה משפחתית של מחלות לב, והטריגליצרידים מצוינים</strong> — שני דברים מרגיעים. אבל LDL 162 בגיל 47 הוא משהו שלא מתעלמים ממנו, אלא מטפלים בו. החדשות הטובות: <strong>בדיוק מה שאנחנו עושים — ירידה בשומן בטני, אימוני כוח, וקרדיו — משפר את שני הערכים האלה.</strong> ולכן יש לנו מקטע תזונה ממוקד השבוע.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— ד"ר אסף</p>
+    </div>
+
+    <table class="blood-table">
+      <thead>
+        <tr><th>בדיקה</th><th>תוצאה</th><th>טווח ייחוס</th><th>סטטוס</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>גלוקוז</td><td class="v">92</td><td>70–100</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>HbA1c</td><td class="v">5.6%</td><td>&lt;5.7%</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>טריגליצרידים</td><td class="v">75</td><td>&lt;150</td><td><span class="st ok">מצוין</span></td></tr>
+        <tr><td>כולסטרול כללי</td><td class="v">210</td><td>&lt;200</td><td><span class="st watch">מעט גבוה</span></td></tr>
+        <tr><td>LDL ("רע")</td><td class="v">162</td><td>&lt;130</td><td><span class="st high">גבוה</span></td></tr>
+        <tr><td>HDL ("טוב")</td><td class="v">33</td><td>&gt;40</td><td><span class="st high">נמוך</span></td></tr>
+        <tr><td>ALT / AST (כבד)</td><td class="v">22 / 22</td><td>&lt;37</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>eGFR (כליה)</td><td class="v">83</td><td>&gt;60</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>המוגלובין</td><td class="v">14.4</td><td>13.5–18</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>פריטין (ברזל)</td><td class="v">181</td><td>10.5–307</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>TSH (תריס)</td><td class="v">1.42</td><td>0.5–5</td><td><span class="st ok">תקין</span></td></tr>
+        <tr><td>אאוזינופילים</td><td class="v">6.7%</td><td>0–6</td><td><span class="st watch">מעט גבוה</span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--gray-500);margin-top:6px;">אאוזינופילים 6.7% — חריגה זעירה, לרוב קשורה לאלרגיה/רגישות עונתית, לא מדאיגה כשלעצמה. נבדוק שוב בבדיקה הבאה.</p>
+
+    <div class="callout red">
+      <h4>⚠️ חשוב — הגבול של מה שאני יכול להגיד</h4>
+      <p>אני (ואסף) נותנים <strong>הכוונה, לא אבחנה ולא מרשם.</strong> פרופיל שומנים עם LDL 162 הוא משהו ש<strong>כדאי שתזכיר לרופא המשפחה שלך</strong> — שהוא יחליט אם צריך מעקב, בדיקה חוזרת מוקדמת, או כל דבר אחר. זו לא קריאת מצוקה — זה פשוט הדבר הנכון לעשות עם מספר כזה. <strong>אנחנו נעבוד על זה מהצד של אורח החיים</strong> (תזונה, ירידה בשומן, קרדיו), ונבדוק שוב בבדיקות החוזרות שתכננו לשבוע 12.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— ד"ר אסף</p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule">
+    <h2>📅 מסגרת השבוע</h2>
+    <p>השבוע מתחיל ביום שלישי. אותה מסגרת מנצחת — 3 אימוני כוח, ריצה, כדורסל — עם <strong>שני שינויים:</strong> הריצה עולה ל-<strong>5 ק"מ</strong> (גם בונה כושר וגם מעלה HDL — רלוונטי במיוחד החודש), ויום שישי הוא <strong>יום שחרור גב</strong> ממוקד. הקש על שורה כדי לקפוץ לאימון.</p>
+    <table class="week-table">
+      <thead>
+        <tr><th>יום</th><th>תאריך</th><th>פעילות</th><th>מתי</th></tr>
+      </thead>
+      <tbody>
+        <tr class="workout clickable" onclick="window.location.hash='workout-a'">
+          <td><a class="row-link" href="#workout-a">שלישי</a></td>
+          <td>23/6</td>
+          <td><a class="row-link" href="#workout-a">אימון A · Push · חדר כושר</a></td>
+          <td>19:00 · 60 דק'</td>
+        </tr>
+        <tr class="cardio">
+          <td>רביעי</td>
+          <td>24/6</td>
+          <td>ריצה קלה <strong>5 ק"מ</strong> בקצב שיחה</td>
+          <td>גמיש</td>
+        </tr>
+        <tr class="workout clickable" onclick="window.location.hash='workout-b'">
+          <td><a class="row-link" href="#workout-b">חמישי</a></td>
+          <td>25/6</td>
+          <td><a class="row-link" href="#workout-b">אימון B · Pull · Lat Pulldown ראשון!</a></td>
+          <td>גמיש · 60 דק'</td>
+        </tr>
+        <tr class="rest clickable" onclick="window.location.hash='back'">
+          <td><a class="row-link" href="#back">שישי</a></td>
+          <td>26/6</td>
+          <td><a class="row-link" href="#back">🎯 שחרור גב + ניידות (10 דק') · מנוחה פעילה</a></td>
+          <td>גמיש</td>
+        </tr>
+        <tr class="workout clickable" onclick="window.location.hash='workout-c'">
+          <td><a class="row-link" href="#workout-c">שבת</a></td>
+          <td>27/6</td>
+          <td><a class="row-link" href="#workout-c">אימון C · Legs · סקוואט עולה ל-50!</a></td>
+          <td>10:00 · 60 דק'</td>
+        </tr>
+        <tr class="basketball">
+          <td>ראשון</td>
+          <td>28/6</td>
+          <td>כדורסל <strong>עוצמה מלאה</strong></td>
+          <td>21:00</td>
+        </tr>
+        <tr class="rest"><td>שני</td><td>29/6</td><td>מנוחה · צ'ק-אין שבוע 7 ליאיר</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout yellow">
+      <h4>אוטו-רגולציה: התאמה ללילה גרוע</h4>
+      <p>אם ישנת פחות מ-6 שעות בלילה שלפני אימון — <strong>הורד סט אחד מכל תרגיל, או 10% מהמשקל.</strong> מערכת עצבים עייפה מרימה פחות בטוח, ועדיף אימון של 85% שתסגור נקי. כתבת ש"השינה והאנרגיה בסדר" — מצוין, נשמור על זה.</p>
+    </div>
+
+    <div class="callout green">
+      <h4>למה הריצה עולה ל-5 ק"מ דווקא השבוע</h4>
+      <p>שתי סיבות: (1) כבר רצת 4 ק"מ בנוחות — 5 זו ההתקדמות הטבעית. (2) <strong>קרדיו אירובי הוא אחד הכלים הכי טובים להעלות HDL</strong> (הכולסטרול ה"טוב" שראינו נמוך). זה לא במקום הכוח — זה לצידו. קצב שיחה, בלי להתאמץ לקצב, פשוט להישאר בתנועה רציפה. אם הברך מתלוננת — חוזרים ל-4.</p>
+    </div>
+  </section>
+
+  <!-- BACK RELEASE -->
+  <section id="back">
+    <h2>🎯 שחרור הגולה בגב</h2>
+    <p>כתבת על <strong>"גולה" בגב מתחת לכתף, באזור השכמות</strong>, וביקשת תרגיל עיסוי עם גליל. התייעצתי עם אסף ועמית — והנה גם הקריאה וגם הפתרון המעשי.</p>
+
+    <div class="callout purple">
+      <h4>מה זה כנראה — ולמה זה הגיוני אצלך</h4>
+      <p>"גולה" מתוחה ורגישה באזור השכמות היא כמעט תמיד <strong>נקודת הדק שרירית (trigger point)</strong> ברומבואידים / טרפז אמצעי — השרירים שבין השכמה לעמוד השדרה. זה <strong>קלאסי</strong> אצל מי שיושב 10+ שעות מול מחשב (הכתפיים נופלות קדימה והשרירים האלה נמתחים ועובדים כל היום), ומתעצם אחרי שבוע של לחיצות וחתירות. <strong>זה שריר, לא משהו מבני — וזה משתחרר.</strong></p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— ד"ר אסף</p>
+    </div>
+
+    <h3 style="color:var(--purple);">🔵 רוטינת שחרור — 8–10 דק' (יום שישי + לפי הצורך)</h3>
+    <p style="font-size:14px;">עשה אותה ביום שישי כמנוחה פעילה, וגם בכל ערב שמרגיש תפוס. הסדר: קודם משחררים את הגולה, אחר כך פותחים את החזה (שמושך את הגב), ואז מנידים את עמוד השדרה.</p>
+
+    <div class="stretch-grid">
+      <div class="stretch-item release">
+        <div class="body"><strong>גליל עיסוי — גב עליון (תורסיק)</strong> — שכב על הגב, גליל לרוחב מתחת לשכמות, ידיים מחבקות את החזה, גלגל לאט מקצה השכמות עד אמצע הגב. <span class="qty">60–90 שנ'</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=thoracic+spine+foam+roller+upper+back" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item release">
+        <div class="body"><strong>שחרור ממוקד על הגולה (כדור/קצה גליל בקיר)</strong> — הצמד את הגליל (או כדור טניס) בין הגב לקיר, מצא את הנקודה הרגישה בדיוק, והישען עליה. כשמרגיש את ה"גולה" — <strong>עצור והחזק 30 שנ'</strong>, נשום עמוק עד שמשתחרר. <span class="qty">2 × 30 שנ' לכל נקודה</span> <em style="color:var(--purple);font-size:12px;">— זה התרגיל הספציפי שביקשת.</em></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=rhomboid+trigger+point+release+ball+wall" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item release">
+        <div class="body"><strong>Thread the Needle</strong> — על ארבע, השחל יד אחת מתחת לגוף וסובב את הגב העליון. פותח בדיוק את האזור התפוס. <span class="qty">30 שנ' × 2 לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=thread+the+needle+stretch+thoracic" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item release">
+        <div class="body"><strong>מתיחת חזה במשקוף</strong> — יד במשקוף, סובב גוף הצידה. חזה תפוס מהמחשב = רומבואידים עמוסים, אז משחררים גם אותו. <span class="qty">30 שנ' × 2 לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=doorway+chest+stretch+pec+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item release">
+        <div class="body"><strong>Cat-Cow + Band Pull-Apart</strong> — 10 חזרות Cat-Cow לניידות, ואז 15 Band Pull-Apart לחיזוק השרירים שמחזיקים את השכמות במקום (מונע חזרה). <span class="qty">10 + 15</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=band+pull+apart+exercise+form" target="_blank">הדגמה</a>
+      </div>
+    </div>
+
+    <div class="callout red">
+      <h4>מתי זה כבר לא "גולה" ועוברים לרופא</h4>
+      <p>השחרור הזה מתאים ל<strong>כאב שרירי מקומי</strong>. אם מופיע אחד מאלה — <strong>עצור ופנה לרופא/פיזיותרפיסט:</strong> כאב <em>חד</em> שיורד ליד, נימול או עקצוץ באצבעות, חולשה בזרוע, או כאב שלא משתפר בכלל אחרי שבוע. אלה כבר לא טווח של גליל עיסוי. בינתיים — לפי התיאור שלך זה נשמע שרירי קלאסי, והרוטינה למעלה אמורה לעשות את העבודה.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— ד"ר אסף</p>
+    </div>
+
+    <div class="callout">
+      <h4>מניעה — כי אתה CTO שיושב כל היום</h4>
+      <p>השחרור מטפל בתסמין; הישיבה היא הסיבה. <strong>כל שעה מול המחשב:</strong> קום, משוך שכמות אחורה ולמטה 5 פעמים, ומתח את החזה במשקוף 20 שנ'. זה 30 שניות שמונעות את חזרת הגולה. שמתי את זה גם ברשימת ההרגלים.</p>
+    </div>
+  </section>
+
+  <!-- WORKOUT A -->
+  <section id="workout-a">
+    <h2>💪 אימון A · Push · שלישי 23/6</h2>
+    <div class="workout-meta">
+      <span class="chip primary">חזה · כתפיים · יד אחורית</span>
+      <span class="chip">60 דק'</span>
+      <span class="chip">מנוחה 90 שנ'</span>
+      <span class="chip success">מבססים את העליות</span>
+    </div>
+
+    <div class="callout">
+      <p style="margin:0;">שבוע 6 העלית הרבה משקלים בבת אחת (זה היה נכון — היית מוכן). <strong>שבוע 7 אנחנו מבססים</strong> את המשקלים האלה: סוגרים את טווח החזרות נקי לפני שעולים שוב. זה "double progression" — קודם משלימים חזרות, אחר כך מוסיפים משקל. פחות זוהר, אבל ככה השריר באמת נבנה בלי פציעות.</p>
+    </div>
+
+    <h3 style="color:var(--orange);">🔥 חימום (5–7 דק') — בלי קפיצות</h3>
+    <div class="stretch-grid">
+      <div class="stretch-item warm">
+        <div class="body"><strong>אופניים נייחים / הליכה מהירה</strong> — להעלות דופק וחום גוף. <span class="qty">5 דק' קצב קל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=5+minute+warm+up+before+workout+no+jumping" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>סיבובי כתפיים</strong> — זרועות מתוחות, מעגלים גדולים. <span class="qty">10 לכל כיוון</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=arm+circles+shoulder+warm+up+exercise" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Band Pull-Apart</strong> — גומייה מול החזה, מותחים הצידה ומועכים שכמות. <span class="qty">15 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=band+pull+apart+exercise+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Scapular Wall Slides</strong> — גב לקיר, מחליק ידיים מעלה-מטה. <span class="qty">10 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=scapular+wall+slides+exercise" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>לחיצת חזה מוט ריק</strong> — חימום ספציפי לתנועה הראשונה. <span class="qty">10–12 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=empty+barbell+bench+press+warm+up" target="_blank">הדגמה</a>
+      </div>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">1</span>
+        <div class="exercise-name"><span class="badge hold">=</span>לחיצת חזה במוט<span class="en">Barbell Bench Press</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">4</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">50 ק"ג <span class="weight-note">סה"כ (מוט 20 + 30 צלחות)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>שבוע 6: 50 × 10,10,10,11 — קרוב מאוד! <strong>נשארים על 50, המטרה: 4 × 12 נקי.</strong> ברגע שכל 4 הסטים סוגרים 12 — שבוע 8 עולים ל-52.5.</li>
+          <li>כפות יציבות, כתפיים מעוגנות, מוט לקצה התחתון של החזה. אם אתה לבד — בכלוב עם מוטות בטיחות.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=barbell+bench+press+proper+form+technique" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">2</span>
+        <div class="exercise-name"><span class="badge hold">=</span>לחיצת חזה משופעת DB<span class="en">Incline Dumbbell Press</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">24 ק"ג × 2 <span class="weight-note">כל יד (מבססים)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 24 × 10,9,7 — עלית למשקל, עכשיו מבססים. נשארים על 24, יעד <strong>3 × 10 נקי</strong>. כשתסגור — שבוע 8 ל-26. ספסל ב-30°, הורד עד כמעט נוגעים בחזה העליון.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=incline+dumbbell+press+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">3</span>
+        <div class="exercise-name"><span class="badge hold">=</span>לחיצת כתפיים בישיבה<span class="en">Seated DB Shoulder Press</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">16 ק"ג × 2 <span class="weight-note">כל יד (מבססים)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 16 × 10,7,10 — מבוסס יפה. נשארים על 16, יעד <strong>3 × 10 נקי</strong>. גב צמוד למשענת, ליבה מתוחה, לא לקשת את הגב התחתון.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=seated+dumbbell+shoulder+press+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">4</span>
+        <div class="exercise-name"><span class="badge up">↑</span>הרמות צד בכבל<span class="en">Cable Lateral Raise</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">6.25 ק"ג <span class="weight-note">כל צד (ניסיון לעלות מ-5)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6 נשארת על 5 (הכתף עייפה אחרי הלחיצות — הגיוני). השבוע נסה <strong>6.25</strong> × 12. אם הכתף שרופה — 5 בטכניקה נקייה עדיף על 6.25 בתנופה. הרמה עד גובה כתף בלבד, מרפק מעט כפוף.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=cable+lateral+raise+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">5</span>
+        <div class="exercise-name"><span class="badge hold">=</span>פשיטת מרפקים בכבל<span class="en">Cable Tricep Pushdown</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">28.75 ק"ג <span class="weight-note">(מבססים)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 28.75 × 12,10,12 — קרוב. נשארים, יעד 3 × 12 נקי, ואז עולים. מרפקים צמודים לגוף, פשיטה מלאה, בלי להיעזר בכתפיים.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=cable+tricep+pushdown+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">6</span>
+        <div class="exercise-name"><span class="badge up">↑</span>פלאנק<span class="en">Plank</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">זמן</div><div class="value">100 שנ'</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 90 × 3 נקי. עולים ל-100. ליבה מכווצת, ישבן לא עולה, גב ישר — איכות חשובה ממספר השניות.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=plank+proper+form+core" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <h3 style="color:var(--orange);">🧘 מתיחות סיום (5 דק')</h3>
+    <div class="stretch-grid">
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת חזה במשקוף</strong> — יד במשקוף, סובב גוף הצידה. <span class="qty">30 שנ' × 2 לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=doorway+chest+stretch+pec+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת כתף צולבת</strong> — יד מושטת על פני החזה, היד השנייה מושכת. <span class="qty">30 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=cross+body+shoulder+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת טריצפס מעל הראש</strong> — מרפק כפוף מעל הראש, היד השנייה מושכת. <span class="qty">30 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=overhead+triceps+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>גליל גב עליון (תורסיק)</strong> — שחרור הגב העליון, רלוונטי לגולה שלך. <span class="qty">60 שנ'</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=thoracic+spine+foam+roller+upper+back" target="_blank">הדגמה</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKOUT B -->
+  <section id="workout-b">
+    <h2>💪 אימון B · Pull · חמישי 25/6</h2>
+    <div class="workout-meta">
+      <span class="chip primary">גב · ביצפס · ליבה</span>
+      <span class="chip">60 דק'</span>
+      <span class="chip">מנוחה 90 שנ'</span>
+      <span class="chip warning">סדר חדש — Lat Pulldown ראשון</span>
+    </div>
+
+    <div class="callout orange">
+      <h4>השינוי שביקשת — Lat Pulldown עובר להיות ראשון</h4>
+      <p>רשמת ב-Hevy: "35 עדיין קשה, ירדתי ל-30 כי התעייפתי, זה היה התרגיל הרביעי, צריך להתחיל איתו." <strong>צודק לחלוטין — ועשיתי בדיוק את זה.</strong> כשתעשה אותו ראשון, בכוחות מלאים, ה-35 יהיה הרבה יותר נגיש. זה לא היה חוסר כוח, זה היה סדר. עכשיו נפתור.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— עמית</p>
+    </div>
+
+    <h3 style="color:var(--orange);">🔥 חימום (5 דק')</h3>
+    <div class="stretch-grid">
+      <div class="stretch-item warm">
+        <div class="body"><strong>אופניים נייחים / הליכה מהירה</strong> — להעלות דופק. <span class="qty">5 דק' קל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=5+minute+warm+up+before+workout+no+jumping" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Band Pull-Apart</strong> — הפעלת שרירי הגב העליון (וטוב לגולה). <span class="qty">15 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=band+pull+apart+exercise+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Scapular Pulls (תלייה)</strong> — תלוי על מתח, מועך שכמות בלי לכופף מרפקים. <span class="qty">10 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=scapular+pull+ups+hanging+exercise" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Bird Dog</strong> — על ארבע, יד ורגל נגדית מושטות. <span class="qty">10 לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=bird+dog+exercise+core+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>משיכת פולי קלה (חימום)</strong> — סט קל לפני המשקל העובד. <span class="qty">15 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=lat+pulldown+warm+up+set" target="_blank">הדגמה</a>
+      </div>
+    </div>
+
+    <div class="exercise replaced">
+      <div class="exercise-header">
+        <span class="exercise-number">1</span>
+        <div class="exercise-name"><span class="badge">חדש בסדר</span>משיכת פולי עליון<span class="en">Lat Pulldown</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">4</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10–12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">35 ק"ג <span class="weight-note">ראשון באימון — בכוחות מלאים</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים — הפעם הוא ראשון:</strong>
+        <ul>
+          <li>עכשיו שאתה טרי, <strong>35 צריך להרגיש נגיש</strong>. יעד: <strong>4 × 12 נקי.</strong> כשתסגור — קופצים ישר ל-40 (אין 37.5 בחדר, תדלג עליו). תצפה לרדת ל-8 חזרות וזה מצוין.</li>
+          <li><strong>טיפ ציוד שעדיין פתוח:</strong> שאל את צוות החדר על משקולת מגנט 2.5 ק"ג לסטאק — תפתור את הקפיצה הגדולה מ-35 ל-40.</li>
+          <li>אחיזה רחבה, מושך לעצם הבריח, חזה למעלה, בלי תנופת גוף.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=lat+pulldown+proper+form+tempo" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">2</span>
+        <div class="exercise-name"><span class="badge hold">=</span>חתירה במוט<span class="en">Barbell Bent Over Row</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">4</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10–12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">50 ק"ג <span class="weight-note">סה"כ (מוט 20 + 30 צלחות)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>שבוע 6: קפצת ל-50 וסגרת 12,10,10,10 — מצוין! נשארים על 50, יעד <strong>4 × 12 נקי</strong>, ואז שבוע 8 ל-52.5.</li>
+          <li>גב ישר וניטרלי, ירכיים אחורה, מושך לטבור. שמור על טכניקה — זה התרגיל הכי קשור לגב התחתון.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=barbell+row+proper+form+bent+over" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">3</span>
+        <div class="exercise-name"><span class="badge up">↑</span>חתירה בישיבה בכבל<span class="en">Seated Cable Row (V-Grip)</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10–12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">80 ק"ג <span class="weight-note">(הקפיצה שזיהית — אין 72.5)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>שבוע 6 כבר סגרת 80×10 בסט אחרון ורשמת "אין 72.5, הקפיצה היא 80". <strong>אז מבססים את ה-80</strong>, יעד 3 × 10–12.</li>
+          <li>אחיזה צרה, חזה למעלה, מועך שכמות בסוף התנועה. אל תזוז עם הגב קדימה-אחורה.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=seated+cable+row+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">4</span>
+        <div class="exercise-name"><span class="badge hold">=</span>Face Pull בכבל<span class="en">Cable Face Pull</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">28.75 ק"ג <span class="weight-note">(מבססים)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 28.75 × 15,15,12. נשארים, יעד 3 × 15. <strong>תרגיל מפתח לבריאות הכתף ולגב העליון — רלוונטי ישירות לגולה שלך.</strong> מושך לגובה העיניים, מרפקים גבוהים, מסובב כתפיים החוצה.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=face+pull+cable+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">5</span>
+        <div class="exercise-name"><span class="badge hold">=</span>כפיפת מרפקים DB<span class="en">DB Bicep Curl</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">14 ק"ג × 2 <span class="weight-note">כל יד (מבססים)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 14 × 12,12,10 — כמעט 3 × 12 נקי. נשארים על 14, סוגרים 3 × 12, ואז שבוע 8 עולים ל-16. מרפקים צמודים, הורדה איטית 2 שניות, בלי תנופה.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=dumbbell+bicep+curl+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise hold">
+      <div class="exercise-header">
+        <span class="exercise-number">6</span>
+        <div class="exercise-name"><span class="badge hold">=</span>Hammer Curl<span class="en">DB Hammer Curl</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">16 ק"ג × 2 <span class="weight-note">כל יד (מבססים)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 16 × 11,10,10 — עלית למשקל, עכשיו מבססים. יעד 3 × 12. כף יד פנימה לאורך כל התנועה, בלי לנדנד.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=hammer+curl+dumbbell+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">7</span>
+        <div class="exercise-name"><span class="badge up">↑</span>הרמות רגליים על מתח<span class="en">Hanging Knee Raise</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">משקל גוף</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 15,15,12 — כמעט שם. יעד 3 × 15 נקי. בלי תנופה — הליבה מרימה, לא המומנטום. כשתסגור 3 × 15 — נוסיף משקל בין הקרסוליים.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=hanging+knee+raise+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <h3 style="color:var(--orange);">🧘 מתיחות סיום (5 דק')</h3>
+    <div class="stretch-grid">
+      <div class="stretch-item">
+        <div class="body"><strong>תלייה פאסיבית על המתח</strong> — מאריך עמוד שדרה ומרפה את הגב. <span class="qty">30 שנ' × 2</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=passive+dead+hang+bar+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Doorway Lat Stretch</strong> — אחיזה במשקוף, ישבן אחורה, מאריך את ה-lat. <span class="qty">30 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=doorway+lat+stretch" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Thread the Needle</strong> — סיבוב גב עליון, ישירות לאזור הגולה. <span class="qty">30 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=thread+the+needle+stretch+thoracic" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת ביצפס בקיר</strong> — יד מאחור על קיר, סובב גוף. <span class="qty">30 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=biceps+stretch+wall" target="_blank">הדגמה</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKOUT C -->
+  <section id="workout-c">
+    <h2>💪 אימון C · Legs · שבת 27/6 <span style="font-size:14px;color:var(--green);">— סקוואט עולה!</span></h2>
+    <div class="workout-meta">
+      <span class="chip primary">רגליים · ליבה</span>
+      <span class="chip">60 דק'</span>
+      <span class="chip success">סקוואט 40→50</span>
+      <span class="chip success">חוזר ה-Bulgarian</span>
+    </div>
+
+    <div class="callout green">
+      <h4>הסקוואט עולה — כי כתבת "היה קל"</h4>
+      <p>בשבוע 6 עשית סקוואט 40×8 ורשמת "היה קל". <strong>זה הסימן בדיוק.</strong> הברך נקייה כבר שבועיים, ובשבוע 2 כבר עשית 50×8 — אז אנחנו חוזרים לשם. <strong>50 ק"ג, 3 סטים של 8.</strong> אם הברך שותקת והטכניקה נקייה — תוסיף סט רביעי. גם <strong>ה-Bulgarian Split Squat חוזר</strong> במקום ה-Step-Up (תרגיל חד-צדדי חזק יותר), והורדתי את Leg Extension השבוע כדי לשמור על 60 דק' — הקוואד מכוסה היטב בסקוואט, Leg Press וה-Bulgarian.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— עמית, באישור ד"ר אסף</p>
+    </div>
+
+    <h3 style="color:var(--orange);">🔥 חימום (8 דק') — בלי קפיצות</h3>
+    <div class="stretch-grid">
+      <div class="stretch-item warm">
+        <div class="body"><strong>אופניים נייחים</strong> — בעומס קל, להעלות חום גוף. <span class="qty">5 דק'</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=stationary+bike+warm+up+legs" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Leg Swings קדימה-אחורה</strong> — תנופת רגל מבוקרת. <span class="qty">10 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=leg+swings+front+to+back+dynamic+warm+up" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Leg Swings צד לצד</strong> — פתיחת מפרק הירך. <span class="qty">10 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=side+to+side+leg+swings+hip+mobility" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Glute Bridges</strong> — הפעלת ישבן לפני הסקוואט. <span class="qty">12 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=glute+bridge+exercise+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>סקוואט משקל גוף</strong> — לחימום דפוס התנועה. <span class="qty">10 חזרות</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=bodyweight+squat+warm+up+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item warm">
+        <div class="body"><strong>Quad Sets</strong> — תחזוקת ברך. <span class="qty">15 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=quad+set+exercise+knee+rehab" target="_blank">הדגמה</a>
+      </div>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">1</span>
+        <div class="exercise-name"><span class="badge up">↑</span>סקוואט במוט<span class="en">Barbell Back Squat</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3–4</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">8</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">50 ק"ג <span class="weight-note">סה"כ (מוט 20 + 30 צלחות)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>שבוע 6: 40 × 8 × 3 ורשמת "היה קל". עולים ל-<strong>50</strong> (כבר עשית את זה בשבוע 2). 3 סטים של 8; אם נקי וחלק — <strong>סט רביעי</strong>.</li>
+          <li>בכלוב עם מוטות בטיחות. רגליים ברוחב כתפיים, ירידה עד ירך מקבילה, ברכיים בכיוון האצבעות, גב ישר. <strong>אם הברך מתלוננת — חזור מיד ל-Goblet 16 או Leg Press.</strong></li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=barbell+back+squat+proper+form+beginner" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">2</span>
+        <div class="exercise-name"><span class="badge up">↑</span>דדליפט רומני<span class="en">Romanian Deadlift (RDL)</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">4</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">65 ק"ג <span class="weight-note">סה"כ (מוט 20 + 45 צלחות)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>שבוע 6: 62.5 × 10 × 4 חלק. הגב נקי — עולים ל-65.</li>
+          <li>ירכיים אחורה, גב ישר ניטרלי, מורגש בגב הירך. יורד עד אמצע השוקיים, מוט קרוב לגוף. בלי לעגל את הגב התחתון.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=romanian+deadlift+RDL+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">3</span>
+        <div class="exercise-name"><span class="badge up">↑</span>Leg Press<span class="en">Leg Press (Machine, 45°)</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">4</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">110 ק"ג <span class="weight-note">(עלייה מ-100)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>שבוע 6: 100 × 12 × 4 חלק. עולים ל-110.</li>
+          <li>רגליים גבוה על הלוח, ברכיים לא נופלות פנימה, לא נועלים בשיא. טווח מלא אבל בשליטה.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=leg+press+proper+form+high+foot+placement" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise new-this-week">
+      <div class="exercise-header">
+        <span class="exercise-number">4</span>
+        <div class="exercise-name"><span class="badge new">חוזר</span>Bulgarian Split Squat<span class="en">Bulgarian Split Squat</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10 / רגל</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">14 ק"ג × 2 <span class="weight-note">כל יד (חוזר במקום Step-Up)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong>
+        <ul>
+          <li>חזר לתוכנית (עשית 14 בשבוע 2). רגל אחורית על ספסל, ירידה אנכית, הברך הקדמית מעל הקרסול. מתחיל ברגל החלשה (שמאל).</li>
+          <li>תרגיל חד-צדדי מעולה לפרופורציה ולאיזון בין הרגליים. אם מאתגר מדי בתחילה — בלי משקל בסט ראשון.</li>
+        </ul>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=bulgarian+split+squat+dumbbell+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">5</span>
+        <div class="exercise-name"><span class="badge up">↑</span>Leg Curl במכונה<span class="en">Lying Leg Curl</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">55 ק"ג <span class="weight-note">(עלייה מ-50)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 50 × 12 × 3 נקי. עולים ל-55. הורדה איטית 3 שניות. חשוב לאיזון מול הקוואד, לבריאות הברך ולגב בטוח.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=lying+leg+curl+machine+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">6</span>
+        <div class="exercise-name"><span class="badge up">↑</span>Cable Crunches<span class="en">Cable Crunches</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15</div></div>
+        <div class="stat"><div class="label">משקל</div><div class="value">40 ק"ג <span class="weight-note">(עלייה מ-36.25)</span></div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 36.25 × 15 × 3 חלק. עולים ל-40. על ברכיים, חבל מאחורי הראש, מתכופף עם הליבה — לא מושך עם הידיים. <strong>הליבה היא המפתח לקוביות שאתה מכוון אליהן.</strong>
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=cable+crunch+abs+proper+form" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <div class="exercise progressed">
+      <div class="exercise-header">
+        <span class="exercise-number">7</span>
+        <div class="exercise-name"><span class="badge up">↑</span>פלאנק<span class="en">Plank</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סטים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">זמן</div><div class="value">100 שנ'</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>דגשים:</strong> שבוע 6: 90 × 3 חלק. עולים ל-100. גב ישר, ישבן לא עולה.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=plank+proper+form+core" target="_blank">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        צפה בהדגמה
+      </a>
+    </div>
+
+    <h3 style="color:var(--orange);">🧘 מתיחות סיום + רוטינת ברך (7 דק')</h3>
+    <div class="stretch-grid">
+      <div class="stretch-item">
+        <div class="body"><strong>פום-רולר IT band</strong> — צד הירך החיצוני. <span class="qty">60 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=IT+band+foam+rolling+technique" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>פום-רולר קוואד</strong> — קדמת הירך. <span class="qty">60 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=quad+foam+rolling+technique" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת קוואד עומדת</strong> — אחז קרסול, עקב לישבן. <span class="qty">30 שנ' × 2 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=standing+quadriceps+stretch+proper+form" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>מתיחת גב-ירך עומדת</strong> — רגל על ספסל, מתכופף מהאגן. <span class="qty">30 שנ' × 2 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=standing+hamstring+stretch+on+bench" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Pigeon stretch</strong> — מתיחת ישבן עמוקה. <span class="qty">45 שנ' לכל צד</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=pigeon+pose+stretch+yoga+beginner" target="_blank">הדגמה</a>
+      </div>
+      <div class="stretch-item">
+        <div class="body"><strong>Quad Sets</strong> — סגירת ברך. <span class="qty">3 × 15 לכל רגל</span></div>
+        <a class="watch" href="https://www.youtube.com/results?search_query=quad+set+exercise+knee+rehab" target="_blank">הדגמה</a>
+      </div>
+    </div>
+    <div class="callout green">
+      <p style="margin:0;">הברך נקייה — אבל רוטינת המתיחות והפום-רולר נשארות, <strong>זה מה ששמר עליה.</strong> הסקוואט עלה ל-50 — אם מרגיש עומס אחרי, 15 דק' קרח בבית.</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <h2>🍽 תפריט יומי</h2>
+    <p>מסגרת חדשה: <strong>2250 קק"ל / 185ג חלבון</strong>. השינוי העיקרי הוא <strong>2 קפוצ'ינו במקום 4</strong> — וזה גם חותך קלוריות וגם משרת את פרופיל השומנים (פחות שומן רווי מחלב מלא). השבוע יש <strong>הטיה תזונתית ממוקדת ל-LDL/HDL</strong>, ו-<strong>4 מתכוני ערב חדשים לגמרי.</strong></p>
+
+    <div class="callout orange">
+      <h4>הטיית התזונה השבוע — לעבוד על הכולסטרול דרך הצלחת</h4>
+      <p>אחרי בדיקות הדם, הוספתי כמה דגשים פשוטים שמוכחים כמשפרים LDL/HDL — בלי לשנות את כל התפריט:</p>
+      <ul>
+        <li><strong>סיב מסיס</strong> — שיבולת שועל בבוקר, קטניות בערב (עדשים/שעועית). זה "סופח" כולסטרול. שני המתכונים הראשונים בנויים סביב זה.</li>
+        <li><strong>שומן טוב במקום רווי</strong> — שמן זית, אבוקדו, אגוזי מלך, וטחינה. מורידים קצת חלב מלא (הקפוצ'ינו) ובשר שמן.</li>
+        <li><strong>דג שמן ×2 בשבוע</strong> — סלמון/מקרל. האומגה-3 מעלה HDL ומוריד טריגליצרידים (שכבר מצוינים אצלך).</li>
+        <li><strong>קרדיו</strong> — הריצה ל-5 ק"מ והכדורסל הם חלק מהמרשם, לא רק לשריפת קלוריות.</li>
+      </ul>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— יואב, בתיאום עם ד"ר אסף</p>
+    </div>
+
+    <div class="meal">
+      <div class="meal-header">
+        <div class="meal-name">בוקר<span class="time">· 08:00</span></div>
+        <div class="meal-macros">430 קק"ל · 32 חלבון</div>
+      </div>
+      <ul>
+        <li><strong>חדש מומלץ השבוע:</strong> דייסת שיבולת שועל (40ג שועל) על מים/חלב דל-שומן + דנונה פרו לערבוב + חופן אגוזי מלך + קינמון. <em>השועל והאגוזים = מתקפה ישירה על ה-LDL.</em></li>
+        <li>וריאציה: דנונה פרו + 40ג גרנולה + חופן שקדים + קפוצ'ינו (הראשון מבין השניים).</li>
+      </ul>
+    </div>
+
+    <div class="meal new-spot">
+      <div class="meal-header">
+        <div class="meal-name">🔵 סנאק משרד<span class="time">· 10:30</span></div>
+        <div class="meal-macros">~180 קק"ל · 20 חלבון</div>
+      </div>
+      <p style="font-size:13px;">5 האופציות הקבועות נשארות (דנונה+שקדים / ביצים / קוטג'+שרי / חטיף חלבון / טונה+קרקרים). <a href="week3.html#menu" style="color:var(--orange);font-weight:700;">למעבר ←</a></p>
+    </div>
+
+    <div class="meal">
+      <div class="meal-header">
+        <div class="meal-name">צהריים<span class="time">· 13:00</span></div>
+        <div class="meal-macros">680 קק"ל · 50 חלבון</div>
+      </div>
+      <ul>
+        <li><strong>בסיס:</strong> 200ג חלבון רזה (עוף/טונה) + 150ג פחמימה מבושלת + סלט גדול + חצי אבוקדו / 1 כף טחינה (שומן טוב).</li>
+      </ul>
+    </div>
+
+    <div class="meal new-spot">
+      <div class="meal-header">
+        <div class="meal-name">🟡 סנאק אחה"צ<span class="time">· 16:30</span></div>
+        <div class="meal-macros">~200 קק"ל · 22 חלבון</div>
+      </div>
+      <p style="font-size:13px;">5 האופציות הקבועות נשארות. <strong>הקפה השני (והאחרון) עד 14:00.</strong> אחרי זה — תה צמחים או דקפאין. <a href="week3.html#menu" style="color:var(--orange);font-weight:700;">למעבר ←</a></p>
+    </div>
+
+    <h3 style="color:var(--orange);">🍽 ארוחות ערב — 4 מתכונים חדשים השבוע</h3>
+    <p style="font-size:13px;">כל אחד ~680 קק"ל / 50–55ג חלבון, ערב לא אחרי 19:30. מספיק ל-4 ערבים; שאר הימים — בסיס חלבון+ירק. <strong>השבוע עם דגש על דג שמן וקטניות (ל-LDL/HDL).</strong></p>
+
+    <div class="meal dinner">
+      <div class="meal-header">
+        <div class="meal-name">1 · סלמון אפוי על מצע עדשים ירוקות + סלט<span class="time">· אמצע שבוע</span></div>
+        <div class="meal-macros">~690 קק"ל · 52 חלבון</div>
+      </div>
+      <div class="recipe">
+        <strong>מצרכים (מנה):</strong> 200ג פילה סלמון, 100ג עדשים ירוקות מבושלות, בצל, גזר, סלרי, שום, שמן זית, לימון, פטרוזיליה, סלט עלים.<br>
+        <strong>הכנה:</strong> טגן קלות בצל-גזר-סלרי קצוצים בכף שמן זית, הוסף עדשים מבושלות, שום ומעט מים, בשל 5 דק' לתבשיל רך. אפה את הסלמון בתנור 200°C כ-12–14 דק' עם לימון ומלח. הגש את הסלמון על מצע העדשים, סלט בצד. <em>שילוב מנצח: אומגה-3 מהסלמון (מעלה HDL) + סיב מסיס מהעדשים (מוריד LDL) — בדיוק שני הערכים שאנחנו רוצים לזיז.</em>
+      </div>
+    </div>
+
+    <div class="meal dinner">
+      <div class="meal-header">
+        <div class="meal-name">2 · חזה עוף בתנור עם קינואה, חומוס ופלפלים קלויים<span class="time">· ראשון/שני</span></div>
+        <div class="meal-macros">~680 קק"ל · 55 חלבון</div>
+      </div>
+      <div class="recipe">
+        <strong>מצרכים:</strong> 220ג חזה עוף, 80ג קינואה (יבש), חצי קופסת חומוס (גרגרים), פלפלים אדומים, בצל, שמן זית, כמון, פפריקה, לימון.<br>
+        <strong>הכנה:</strong> תבל את העוף בכמון-פפריקה-שום ואפה 200°C כ-20 דק' עם הפלפלים והבצל. בשל קינואה. חמם את גרגרי החומוס עם מעט שמן זית וכמון. הרכב קערה: קינואה בבסיס, עוף פרוס, פלפלים קלויים, חומוס, סחיטת לימון. <em>חלבון רזה + דגן מלא + קטנית = שובע ארוך וסיב גבוה.</em>
+      </div>
+    </div>
+
+    <div class="meal dinner">
+      <div class="meal-header">
+        <div class="meal-name">3 · דג לבן בתנור עם שעועית לבנה ברוטב עגבניות + ברוקולי<span class="time">· ערב מהיר</span></div>
+        <div class="meal-macros">~670 קק"ל · 53 חלבון</div>
+      </div>
+      <div class="recipe">
+        <strong>מצרכים:</strong> 250ג פילה דג לבן (בקלה/מושט), קופסת שעועית לבנה, עגבניות מרוסקות, שום, בצל, פפריקה מתוקה, שמן זית, ברוקולי טרי/קפוא.<br>
+        <strong>הכנה:</strong> הקפץ בצל ושום בשמן זית, הוסף עגבניות מרוסקות, פפריקה ושעועית לבנה (מסוננת), בשל 8 דק'. הנח את הדג מעל הרוטב, כסה ובשל 8–10 דק' עד שהדג מתפורר. אדה ברוקולי בצד. <em>דג רזה + שעועית = חלבון וסיב מסיס, פחות מ-15 דק' עבודה.</em>
+      </div>
+    </div>
+
+    <div class="meal dinner">
+      <div class="meal-header">
+        <div class="meal-name">4 · המבורגר הודו ביתי על לחמנייה מלאה + בטטה אפויה + קולסלו<span class="time">· ערב משפחתי</span></div>
+        <div class="meal-macros">~700 קק"ל · 50 חלבון</div>
+      </div>
+      <div class="recipe">
+        <strong>מצרכים:</strong> 200ג הודו טחון, בצל, שום, פטרוזיליה, חרדל, לחמנייה מקמח מלא, 1 בטטה, כרוב לבן+סגול, גזר, 1 כף יוגורט + כפית מיונז קל ללבן.<br>
+        <strong>הכנה:</strong> ערבב הודו טחון עם בצל, שום, פטרוזיליה, חרדל ומלח, עצב קציצה ואפה/צלה. אפה בטטה חתוכה לקוביות בתנור 200°C כ-25 דק' עם מעט שמן זית. גרד כרוב וגזר, ערבב עם יוגורט. הרכב המבורגר בלחמנייה מלאה + קולסלו בצד. <em>פתרון "שאריות הילדים": הם אוכלים את אותו הדבר, ואתה שולט במנה. הודו רזה במקום בקר שמן — טוב גם ל-LDL.</em>
+      </div>
+    </div>
+
+    <div class="meal">
+      <div class="meal-header">
+        <div class="meal-name">לפני שינה (אופציונלי)<span class="time">· 22:00</span></div>
+        <div class="meal-macros">150 קק"ל · 18 חלבון</div>
+      </div>
+      <ul>
+        <li>קוטג' 5% (200ג) או דנונה פרו — חלבון איטי שמלווה את הלילה. אחרי כדורסל ביום ראשון — חובה חלבון.</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <h4>קפה — המהלך של השבוע</h4>
+      <p><strong>2 קפוצ'ינו ביום במקום 4, האחרון עד 14:00.</strong> זה הכוונון המרכזי: ~200 קק"ל פחות מחלב, וגם פחות שומן רווי (טוב ל-LDL). אם בא לך חם אחרי השניים — אספרסו קצר/אמריקנו (כמעט בלי קלוריות) או תה. לא מפסיקים קפה — רק מצמצמים את החלב.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— יואב</p>
+    </div>
+  </section>
+
+  <!-- HABITS & TASKS -->
+  <section id="habits">
+    <h2>✅ הרגלים, מדידות, משימות</h2>
+
+    <h3 style="color:var(--green);">🏆 המיקוד השבוע — דיוק, לא מהפכה</h3>
+    <div class="callout green">
+      <p>6 שבועות אתה עקבי להפליא — אימונים מבוצעים, תיעוד מסודר, שינה שחזרה לסדר. <strong>אל תיתן לפלאטו במשקל לשבור את הראש — זה השלב הצפוי, וטיפלנו בו בכוונון קטן.</strong> שלוש נקודות מיקוד השבוע: (1) 2 קפוצ'ינו במקום 4, (2) צעדים ל-9,000–10,000, (3) רוטינת שחרור הגב. זהו — שלושה דברים קטנים, לא דיאטה חדשה. אתה במסלול מצוין.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— דניאל</p>
+    </div>
+
+    <h3>הרגלים יומיים</h3>
+    <ul class="checklist">
+      <li><div class="check"></div><div class="content"><div class="title">שקילה בוקר</div><div class="desc">אחרי שירותים, לפני אוכל. <strong>5 שקילות לפחות</strong> לחישוב ממוצע אמיתי — מספר בודד מטעה.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">☕ 2 קפוצ'ינו ביום (חדש) + קפה עד 14:00</div><div class="desc">המהלך המרכזי השבוע — חותך קלוריות ושומן רווי בבת אחת. אספרסו/תה חופשי אחרי.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">👟 9,000–10,000 צעדים (עלה מ-8,000)</div><div class="desc">ה-NEAT שלך נמוך — זה המקום הכי קל להוציא עוד קלוריות בלי אימון נוסף. שיחת טלפון בעמידה/הליכה.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">🎯 שחרור גב — 2 דק' ביום</div><div class="desc">גליל/כדור על הגולה + מתיחת חזה. בערב או בהפסקה מהמחשב. כל שעה מול המחשב — קום ומשוך שכמות אחורה ×5.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">ויטמין D3 — 1000 יחב"ל</div><div class="desc">בבוקר עם הקפה.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">תיעוד אימון ב-Hevy</div><div class="desc">ה-CSV הוא איך שאני מכייל את כל המשקלים. סוף שבוע — שלח שוב.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">ארוחת ערב לא אחרי 19:30</div><div class="desc">בימים רגילים.</div></div></li>
+    </ul>
+
+    <h3 style="color:var(--green);">🦵 פרוטוקול ברך — יומי (תחזוקה)</h3>
+    <div class="callout green">
+      <p>הברך נקייה — אבל לא מפסיקים, <strong>זה מה ששמר עליה.</strong> במיוחד השבוע שהסקוואט עולה ל-50:</p>
+      <ul>
+        <li><strong>בוקר:</strong> 3 × 15 Quad Sets לכל רגל</li>
+        <li><strong>ערב:</strong> רוטינת מתיחות + פום-רולר קוואד/IT band</li>
+        <li><strong>במחשב:</strong> כל שעה — קום, יישר ברך לחלוטין, 30 שנ' × 2</li>
+        <li>אם הסקוואט החדש בשבת מעיר משהו — קרח 15 דק' אחרי.</li>
+      </ul>
+    </div>
+
+    <h3>משימות פתוחות</h3>
+    <ul class="checklist">
+      <li><div class="check"></div><div class="content"><div class="title">🩸 להזכיר לרופא המשפחה — פרופיל שומנים</div><div class="desc"><span class="due">השבוע</span>LDL 162 / HDL 33 — שווה אזכור לרופא שיחליט על מעקב. לא דחוף, אבל לא להזניח. אם יש לך בדיקת דם ישנה — שלח לי להשוואת מגמה.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">צ'ק-אין שבוע 7 ליאיר</div><div class="desc"><span class="due">שני 29/6</span>ממוצע 5 שקילות, היקפים, <strong>שעות שינה + אנרגיה 1–10 (במספר)</strong>, <strong>הצמדה לתפריט באחוז</strong>, ביצועי אימון, איך עבר הסקוואט ב-50, ומצב הגולה בגב. צרף CSV מ-Hevy.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">בדיקת Lat Pulldown</div><div class="desc"><span class="due">חמישי 25/6</span>שאל את צוות החדר על משקולת מגנט 2.5 ק"ג לסטאק — יפתור את הקפיצה מ-35 ל-40.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">מדידת לחץ דם</div><div class="desc"><span class="due">השבוע</span>פתוח מתחילת התוכנית — בכל בית מרקחת, 5 דק'. רלוונטי במיוחד עכשיו עם פרופיל השומנים. נתון בסיס לפני בדיקות חוזרות בשבוע 12.</div></div></li>
+    </ul>
+  </section>
+
+  <!-- QUESTIONS -->
+  <section id="questions">
+    <h2>❓ נקודות תשומת לב</h2>
+
+    <div class="question" style="background:var(--green-light);border-right-color:var(--green);">
+      <div class="q-label" style="color:#065f46;">🟢 מומנטום אימונים חזק</div>
+      <div class="q-text">חתירה 45→50, חתירת כבל 70→80, RDL 60→62.5, וסקוואט שחוזר ל-50. <strong>אתה מתחזק בקצב מצוין — וזה ממשיך גם כשהמשקל עומד.</strong> השריר שנבנה עכשיו הוא מה שיגרום לשומן שיורד להיראות טוב.</div>
+    </div>
+
+    <div class="question" style="background:var(--orange-light);border-right-color:var(--orange);">
+      <div class="q-label" style="color:#9a3412;">🟠 פלאטו במשקל — מטופל</div>
+      <div class="q-text">3 שבועות שהמשקל והבטן עומדים. <strong>זה צפוי בשלב הזה, וטיפלנו בו</strong> בכוונון קטן (2 קפוצ'ינו + יותר צעדים), בלי דיאטת קיצוץ. נראה את התגובה בצ'ק-אין הבא. אם לא יזוז — נחתוך עוד מעט.</div>
+    </div>
+
+    <div class="question" style="background:var(--red-light);border-right-color:var(--red);">
+      <div class="q-label" style="color:#b91c1c;">🔴 פרופיל שומנים — לעבוד עליו</div>
+      <div class="q-text">LDL 162 (גבוה), HDL 33 (נמוך). השאר בבדיקה מצוין. <strong>אנחנו עובדים על זה מצד אורח החיים</strong> (תזונה, קרדיו, ירידה בשומן), ושווה שתזכיר לרופא המשפחה. בדיקה חוזרת בשבוע 12.</div>
+    </div>
+
+    <div class="question">
+      <div class="q-label">❓ לשקול — צ'ק-אין דו-שבועי?</div>
+      <div class="q-text">המומנטום יציב מספיק כדי לעבור לצ'ק-אין כל שבועיים. <strong>אבל</strong> — בגלל הפלאטו החדש ובדיקות הדם, אני מציע להישאר שבועי עוד 2 שבועות עד שנראה שהכוונון עובד, ואז נעבור לדו-שבועי. נדבר על זה בצ'ק-אין הבא.</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <strong>תוכנית שבוע 7 · 23 – 29 ביוני 2026</strong><br>
+    מעודכן: 22/6/2026 · יאיר אבני, מאמן ראשי<br>
+    התייעצויות פנימיות: עמית (מבססים עומסים + Lat Pulldown ראשון + סקוואט ל-50 + חזרת Bulgarian), יואב (כוונון קלורי + הטיית תזונה ל-LDL/HDL + 4 מתכונים), דניאל (ניהול הפלאטו + 3 הרגלי מיקוד), ד"ר אסף (קריאת בדיקות דם + רוטינת שחרור גב)
+  </div>
+
+</div>
+
+</body>
+</html>
