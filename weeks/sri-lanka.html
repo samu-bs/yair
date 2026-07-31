@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סרי לנקה · יוסי · 1–22 באוגוסט 2026</title>
+<style>
+  :root {
+    --navy: #1e3a5f;
+    --navy-dark: #0f172a;
+    --orange: #f97316;
+    --orange-light: #fef3e8;
+    --green: #10b981;
+    --green-light: #ecfdf5;
+    --yellow: #ca8a04;
+    --yellow-light: #fef9c3;
+    --red: #ef4444;
+    --red-light: #fef2f2;
+    --purple: #7c3aed;
+    --purple-light: #f5f3ff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-500: #64748b;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, "Open Sans Hebrew", "Heebo", sans-serif;
+    color: var(--gray-900);
+    font-size: 16px;
+    line-height: 1.6;
+    direction: rtl;
+    background: #fafafa;
+    padding-bottom: 60px;
+  }
+
+  nav.topnav { position: sticky; top: 0; z-index: 100; background: var(--navy); color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .nav-toggle { display: none; }
+  .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; max-width: 760px; margin: 0 auto; }
+  .nav-brand { color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .nav-brand .accent { color: var(--orange); }
+  .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; border-radius: 6px; }
+  .hamburger span { display: block; width: 24px; height: 2.5px; background: white; border-radius: 2px; transition: transform 0.2s, opacity 0.2s; }
+  .nav-links { display: flex; gap: 4px; align-items: center; }
+  nav.topnav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: background 0.15s; }
+  nav.topnav a:hover, nav.topnav a:active { background: rgba(255,255,255,0.15); }
+
+  @media (max-width: 720px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; align-items: stretch; padding: 8px 12px 14px; gap: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.1); }
+    .nav-toggle:checked ~ .nav-bar .nav-links { display: flex; }
+    .nav-toggle:checked ~ .nav-bar .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle:checked ~ .nav-bar .hamburger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-bar .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    nav.topnav a { padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    nav.topnav a:last-child { border-bottom: none; }
+  }
+
+  .quick-actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0 8px; }
+  @media (min-width: 560px) { .quick-actions { grid-template-columns: repeat(4, 1fr); } }
+  .quick-actions a { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; padding: 16px 10px; border-radius: 10px; background: white; border: 1px solid var(--gray-200); color: var(--gray-900); transition: transform 0.1s, box-shadow 0.15s; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .quick-actions a:hover, .quick-actions a:active { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .quick-actions a .qa-icon { font-size: 24px; margin-bottom: 4px; }
+  .quick-actions a .qa-label { font-weight: 700; font-size: 13px; color: var(--navy); }
+  .quick-actions a .qa-sub { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+  .quick-actions a.wa { border-right: 4px solid var(--navy); }
+  .quick-actions a.wb { border-right: 4px solid var(--orange); }
+  .quick-actions a.wc { border-right: 4px solid var(--green); }
+  .quick-actions a.food { border-right: 4px solid var(--purple); }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
+
+  .hero { padding: 32px 0 24px; border-bottom: 1px solid var(--gray-200); margin-bottom: 24px; }
+  .hero .eyebrow { color: var(--gray-500); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .hero h1 { color: var(--navy); font-size: 36px; line-height: 1.1; margin-bottom: 4px; }
+  .hero .dates { color: var(--gray-500); font-size: 18px; margin-bottom: 18px; }
+  .hero .accent-bar { width: 50px; height: 4px; background: var(--orange); margin-bottom: 18px; }
+  .hero .lead { color: var(--gray-700); font-size: 15px; line-height: 1.65; }
+
+  section { scroll-margin-top: 60px; margin-bottom: 36px; }
+  section h2 { color: var(--navy); font-size: 24px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--navy); }
+  section h3 { color: var(--gray-900); font-size: 18px; margin: 16px 0 8px; }
+  section p { margin-bottom: 10px; color: var(--gray-700); }
+
+  .week-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .week-table th, .week-table td { text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--gray-200); }
+  .week-table th { background: var(--gray-100); font-weight: 700; font-size: 13px; color: var(--gray-700); }
+  .week-table td:first-child { font-weight: 700; color: var(--gray-900); }
+  .week-table tr.wa td:first-child { color: var(--navy); }
+  .week-table tr.wb td:first-child { color: var(--orange); }
+  .week-table tr.wc td:first-child { color: var(--green); }
+  .week-table tr.rest td { color: var(--gray-500); }
+
+  .callout { padding: 14px 16px; margin: 14px 0; border-radius: 8px; background: var(--gray-50); border-right: 4px solid var(--navy); }
+  .callout.orange { background: var(--orange-light); border-right-color: var(--orange); }
+  .callout.green { background: var(--green-light); border-right-color: var(--green); }
+  .callout.yellow { background: var(--yellow-light); border-right-color: var(--yellow); }
+  .callout.red { background: var(--red-light); border-right-color: var(--red); }
+  .callout.purple { background: var(--purple-light); border-right-color: var(--purple); }
+  .callout h4 { font-size: 15px; margin-bottom: 6px; color: var(--gray-900); }
+  .callout p { font-size: 14px; margin: 0 0 6px 0; color: var(--gray-700); }
+  .callout ul { padding-right: 18px; }
+  .callout li { font-size: 14px; color: var(--gray-700); margin: 3px 0; }
+
+  .workout-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+  .workout-meta .chip { background: var(--gray-100); color: var(--gray-700); padding: 5px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+  .workout-meta .chip.primary { background: var(--navy); color: white; }
+  .workout-meta .chip.warning { background: var(--orange-light); color: #9a3412; }
+  .workout-meta .chip.success { background: var(--green-light); color: #065f46; }
+
+  .exercise { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border-right: 4px solid var(--navy); }
+  .exercise.band { border-right-color: var(--orange); }
+  .exercise.trx { border-right-color: var(--purple); }
+  .exercise.core { border-right-color: var(--green); }
+  .exercise-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+  .exercise-name { font-size: 16px; font-weight: 700; color: var(--gray-900); flex: 1; }
+  .exercise-name .en { font-size: 12px; color: var(--gray-500); font-weight: 500; display: block; margin-top: 2px; }
+  .exercise-name .badge { display: inline-block; background: var(--orange); color: white; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; vertical-align: middle; margin-left: 4px; }
+  .exercise-name .badge.trx { background: var(--purple); }
+  .exercise-name .badge.core { background: var(--green); }
+  .exercise-number { background: var(--navy); color: white; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .exercise-stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0; font-size: 14px; }
+  .exercise-stats .stat { display: flex; flex-direction: column; }
+  .exercise-stats .stat .label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+  .exercise-stats .stat .value { font-size: 15px; font-weight: 700; color: var(--orange); }
+  .exercise-cues { background: var(--gray-50); padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 13px; color: var(--gray-700); }
+  .exercise-cues strong { color: var(--gray-900); }
+  .exercise-cues ul { padding-right: 16px; margin: 4px 0; }
+  .exercise-cues li { margin: 3px 0; }
+  .demo-button { display: inline-flex; align-items: center; gap: 6px; background: var(--red); color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-top: 6px; }
+  .demo-button:hover { background: #dc2626; }
+  .demo-button .icon { width: 16px; height: 16px; fill: white; }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px dashed var(--gray-200); align-items: flex-start; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist .check { width: 18px; height: 18px; border: 2px solid var(--navy); border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+  .checklist .content { flex: 1; }
+  .checklist .title { font-weight: 700; font-size: 15px; color: var(--gray-900); }
+  .checklist .desc { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
+
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--gray-200); text-align: right; color: var(--gray-500); font-size: 13px; }
+  .footer strong { color: var(--gray-900); }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <div class="nav-bar">
+    <a href="../index.html" class="nav-brand">← <span class="accent">סרי לנקה</span> · יוסי</a>
+    <label for="nav-toggle" class="hamburger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </label>
+    <div class="nav-links">
+      <a href="#hero">🏠 בית</a>
+      <a href="#how">🧭 איך זה עובד</a>
+      <a href="#rhythm">📅 השבוע</a>
+      <a href="#workout-a">💪 A</a>
+      <a href="#workout-b">💪 B</a>
+      <a href="#workout-c">💪 C</a>
+      <a href="#food">🍛 תזונה</a>
+      <a href="#checkin">✅ חזרה</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="eyebrow">מצב חופשה · 3 שבועות · תחזוקה, לא דיאטה</div>
+    <h1>סרי לנקה</h1>
+    <div class="dates">1 – 22 באוגוסט 2026</div>
+    <div class="accent-bar"></div>
+    <p class="lead">
+      זה הדף היחיד שאתה צריך בסרי לנקה — שמור אותו במועדפים או צלם מסך, כי לא תמיד יהיה אינטרנט. הכנתי לך <strong>שלושה ימי אימון שמקבילים אחד-לאחד לתוכנית הרגילה שלך</strong> (A דחיפה · B משיכה · C רגליים), בשתי גרסאות: <strong>אם במלון יש חדר כושר — אתה עושה את האימון המקורי</strong> (הפירוט למטה, מותאם למשקלים שיהיו שם). <strong>אם אין — אתה עושה את אותו אימון עם גומיית דקטלון ו-TRX</strong>, ומקבל בדיוק את אותן קבוצות שריר. המטרה ל-3 שבועות פשוטה: לא לאבד את הכוח שבנית, ליהנות מהמדינה, ולחזור ב-24/8 בדיוק למקום שעצרת — עם השיאים 60/60/70 שמחכים בבנק. הכל מבוסס RIR (רזרבה בבנק), כי אין לך את המשקלים המדויקים שלך — אז מובילים לפי תחושה, לא לפי המספר.
+    </p>
+  </section>
+
+  <!-- QUICK ACTIONS -->
+  <div class="quick-actions">
+    <a href="#workout-a" class="wa">
+      <span class="qa-icon">💪</span>
+      <span class="qa-label">אימון A</span>
+      <span class="qa-sub">דחיפה · חזה/כתף/יד</span>
+    </a>
+    <a href="#workout-b" class="wb">
+      <span class="qa-icon">💪</span>
+      <span class="qa-label">אימון B</span>
+      <span class="qa-sub">משיכה · גב/ביצפס</span>
+    </a>
+    <a href="#workout-c" class="wc">
+      <span class="qa-icon">💪</span>
+      <span class="qa-label">אימון C</span>
+      <span class="qa-sub">רגליים + ליבה</span>
+    </a>
+    <a href="#food" class="food">
+      <span class="qa-icon">🍛</span>
+      <span class="qa-label">תזונה</span>
+      <span class="qa-sub">5 עוגנים + הליכה</span>
+    </a>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <h2>🧭 איך זה עובד — יש חדר כושר או אין</h2>
+    <p>לפני כל אימון תשאל שאלה אחת: <strong>יש היום גישה לחדר כושר (במלון או קרוב)?</strong> משם מתפצל:</p>
+
+    <div class="callout">
+      <h4>✅ יש חדר כושר → האימון המקורי</h4>
+      <p>עשה את מבנה ה-Push/Pull/Legs הרגיל שלך (בדיוק כמו בבית): לחיצת חזה, לחיצת כתפיים, סקוואט, RDL, משיכות. <strong>אבל אל תרדוף אחרי המספרים שלך מהבית</strong> — הציוד שם שונה, המכונות מכוילות אחרת. תעבוד לפי תחושה: <strong>RIR 2–3</strong> (שיישארו 2–3 חזרות בבנק בכל סט), אותו טווח חזרות, טמפו נקי. אם יש רק דמבלים — מצוין, כל האימון עובד עם דמבלים. המטרה בחופשה היא <em>לתחזק</em> את הגירוי, לא לשבור שיאים.</p>
+    </div>
+
+    <div class="callout orange">
+      <h4>🎒 אין חדר כושר → גרסת גומייה + TRX</h4>
+      <p>אותו אימון בדיוק (A/B/C), עם הגומייה וה-TRX. <strong>3 סבבים לכל אימון, 25–35 דק', מנוחה 60–90 שנ' בין סבבים.</strong> הטריק עם גומייה: אין "משקל" קבוע, אז את העצימות מכתיבים <strong>המרחק מהעוגן</strong> (רחוק יותר = כבד יותר) ו<strong>הטמפו</strong> (3 שניות בשלב השלילי). המטרה: להגיע ל-RIR 1–2 בסוף כל סט. אם קל מדי — התרחק מהעוגן או האט; אם קשה מדי — התקרב.</p>
+    </div>
+
+    <div class="callout yellow">
+      <h4>⚖️ הכלל שמעל הכל — אוטו-רגולציה בחופשה</h4>
+      <p>אנחנו לא מטפסים בחופשה. אם ישנת מעט, יום מסלול ארוך רוקן אותך, או שמשהו צובט — <strong>קצר את האימון, אל תכריח.</strong> יום הליכה/מסלול רציני (סיגירייה, אלה, הרי התה) נחשב אימון רגליים מלא — באותו יום אין צורך ב-C. עדיף 2 אימונים איכותיים בשבוע מ-3 בכוח. זה שובר-שוויון: בריאות וכיף לפני הפרוטוקול.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— עמית, דרך יאיר</p>
+    </div>
+  </section>
+
+  <!-- WEEKLY RHYTHM -->
+  <section id="rhythm">
+    <h2>📅 מקצב שבועי — גמיש, לא נעול ליום</h2>
+    <p>אל תיצמד לימים — תיצמד ל<strong>3 אימונים בשבוע עם יום מנוחה ביניהם</strong>, סביב הטיולים. תבנית לדוגמה לשבוע טיפוסי:</p>
+    <table class="week-table">
+      <thead>
+        <tr><th>יום בשבוע</th><th>מה עושים</th></tr>
+      </thead>
+      <tbody>
+        <tr class="wa"><td>יום 1</td><td>אימון A · דחיפה (30 דק' בוקר, לפני שיוצאים)</td></tr>
+        <tr class="rest"><td>יום 2</td><td>טיול / חוף / הליכה — 12,000+ צעדים</td></tr>
+        <tr class="wb"><td>יום 3</td><td>אימון B · משיכה</td></tr>
+        <tr class="rest"><td>יום 4</td><td>יום מסלול (= רגליים) או מנוחה</td></tr>
+        <tr class="wc"><td>יום 5</td><td>אימון C · רגליים <em>(דלג אם יום 4 היה מסלול כבד)</em></td></tr>
+        <tr class="rest"><td>יום 6–7</td><td>תנועה חופשית, שחייה, הליכה. בונוס: ריצת בוקר על החוף.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout green">
+      <h4>🎯 המדד היחיד בחופשה</h4>
+      <p>אין משקל, לא מחפשים. <strong>המדד הוא החגורה</strong> — אותו חור = הכל בשליטה. בדוק פעם בשבוע, בוקר. וזכור: מה שהמשקל יראה כשתחזור (23/8) זה מים ומלח — שקילה אמיתית רק ב-27/8. אל תיתן למספר לבלבל אותך.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— דניאל, דרך יאיר</p>
+    </div>
+  </section>
+
+  <!-- WORKOUT A -->
+  <section id="workout-a">
+    <h2>💪 אימון A · דחיפה — חזה · כתפיים · יד אחורית</h2>
+    <div class="workout-meta">
+      <span class="chip primary">3 סבבים · 25–35 דק'</span>
+      <span class="chip">מנוחה 60–90 שנ'</span>
+      <span class="chip warning">מקביל ל-Push המקורי</span>
+      <span class="chip success">RIR 1–2</span>
+    </div>
+    <p style="font-size:13px;color:var(--gray-500);">🏋️ <strong>יש חדר כושר?</strong> עשה את ה-Push הרגיל: לחיצת חזה, לחיצת חזה משופעת, לחיצת כתפיים, הרמות צד, פשיטת מרפקים, פלאנק — לפי תחושה RIR 2–3. אחרת — הגרסה הזו:</p>
+
+    <h3 style="color:var(--orange);">🔥 חימום (4 דק')</h3>
+    <div class="callout">
+      <ul>
+        <li>Band Pull-Apart — 15 חזרות</li>
+        <li>סיבובי כתפיים + Scapular Wall Slides — 10 + 10</li>
+        <li>שכיבות סמיכה קלות — 8 (להעיר את החזה)</li>
+      </ul>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">1</span>
+        <div class="exercise-name">לחיצת חזה בגומייה / TRX<span class="badge">גומייה</span><span class="en">Band Chest Press / TRX Chest Press</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את לחיצת החזה במוט.</strong> גומייה מאחורי הגב, עוברת מתחת לבתי השחי, דוחפים קדימה עד יישור מרפקים. TRX: פנים לרצפה, גוף בקו ישר, יורדים 3 שניות. <strong>כבד מדי? התקרב לעוגן / צעד קדימה. קל מדי? התרחק.</strong> טמפו איטי בירידה — זה מה שיחליף את המשקל.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=resistance+band+chest+press+standing" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise trx">
+      <div class="exercise-header">
+        <span class="exercise-number">2</span>
+        <div class="exercise-name">שכיבות סמיכה (וריאציה) / Pike<span class="badge trx">משקל גוף</span><span class="en">Push-Up / Pike Push-Up</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>נפח לחזה + כתפיים.</strong> קשה? ידיים על מיטה/שידה. קל? רגליים על מיטה. לכתפיים: <strong>Pike Push-Up</strong> (אגן למעלה, ראש לרצפה) — 8–12. חזה בקו ישר, מרפקים ~45°.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=pike+push+up+shoulders+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">3</span>
+        <div class="exercise-name">לחיצת כתפיים בגומייה<span class="badge">גומייה</span><span class="en">Band Overhead Press</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את לחיצת הכתפיים ב-DB.</strong> עומדים על אמצע הגומייה, ידיות בגובה כתפיים, דוחפים מעל הראש. ליבה מתוחה, בלי לקשת גב תחתון. אם עשית Pike קודם — כאן אפשר להקל טווח.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=resistance+band+overhead+shoulder+press" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">4</span>
+        <div class="exercise-name">הרמות צד בגומייה<span class="badge">גומייה</span><span class="en">Band Lateral Raise</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15–20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>הכתף הצדית — זו שנותנת את רוחב ה-V.</strong> דורכים על הגומייה, מרימים לצדדים עד גובה כתף, מרפק מעט כפוף, בלי תנופה ובלי הרמת כתף. עם גומייה זה מרגיש נהדר — עצור על החתירה כלפי מעלה חצי שנייה.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=band+lateral+raise+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise trx">
+      <div class="exercise-header">
+        <span class="exercise-number">5</span>
+        <div class="exercise-name">דיפים / פשיטת מרפקים בגומייה<span class="badge trx">טריצפס</span><span class="en">Chair Dips / Band Pushdown</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את פשיטת המרפקים בכבל.</strong> דיפים על כיסא/מיטה (ידיים לאחור, יורדים ודוחפים) — או גומייה תלויה גבוה, פשיטת מרפקים כלפי מטה, מרפקים צמודים לגוף. פשיטה מלאה בסוף.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=chair+dips+triceps+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise core">
+      <div class="exercise-header">
+        <span class="exercise-number">6</span>
+        <div class="exercise-name">פלאנק + פלאנק צד<span class="badge core">ליבה</span><span class="en">Plank + Side Plank</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">פלאנק</div><div class="value">2 × 90 שנ'</div></div>
+        <div class="stat"><div class="label">פלאנק צד</div><div class="value">2 × 40 שנ' / צד</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>הפלאנק שלקחת מהבית — הוא כאן.</strong> האלכסונים הם המסגרת של הקוביות. גוף בקו ישר, אגן לא שוקע ולא מסתובב.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=plank+side+plank+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+  </section>
+
+  <!-- WORKOUT B -->
+  <section id="workout-b">
+    <h2>💪 אימון B · משיכה — גב · ביצפס · ליבה</h2>
+    <div class="workout-meta">
+      <span class="chip primary">3 סבבים · 25–35 דק'</span>
+      <span class="chip">מנוחה 60–90 שנ'</span>
+      <span class="chip warning">מקביל ל-Pull המקורי</span>
+      <span class="chip success">RIR 1–2</span>
+    </div>
+    <p style="font-size:13px;color:var(--gray-500);">🏋️ <strong>יש חדר כושר?</strong> עשה את ה-Pull הרגיל: מתח (אם יש מוט), חתירה, Lat Pulldown, פייס-פול, ביצפס, הרמות רגליים — RIR 2–3. אחרת — הגרסה הזו. <strong>ואם יש מוט מתח בגן/בפארק — נצל אותו למתח, זה התרגיל הכי חשוב שלך.</strong></p>
+
+    <h3 style="color:var(--orange);">🔥 חימום (4 דק')</h3>
+    <div class="callout">
+      <ul>
+        <li>Band Pull-Apart — 15 חזרות</li>
+        <li>Cat-Cow — 10 חזרות</li>
+        <li>תלייה פאסיבית (אם יש מוט) — 2 × 20 שנ'</li>
+      </ul>
+    </div>
+
+    <div class="exercise trx">
+      <div class="exercise-header">
+        <span class="exercise-number">1</span>
+        <div class="exercise-name">חתירת TRX / מתח (אם יש מוט)<span class="badge trx">TRX</span><span class="en">TRX Row / Pull-Up</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את המתח/חתירה.</strong> יש מוט מתח? עשה מתח (המשך את הרצף 6-5-5 שבנית — גם 3-4 חזרות נקיות מתחזקות). אין? TRX: אוחזים בידיות, גוף נשען לאחור בקו ישר, מושכים את החזה לידיים, מועכים שכמות. ככל שהרגליים קדימה יותר — קשה יותר.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=TRX+row+form+beginner" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">2</span>
+        <div class="exercise-name">משיכת פולי בגומייה<span class="badge">גומייה</span><span class="en">Band Lat Pulldown</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את ה-Lat Pulldown.</strong> עוגן גבוה (מעל דלת / ענף), אוחזים בשתי ידיים, מושכים כלפי מטה לצדי הגוף, מרפקים למטה ולאחור. מרגישים את הרוחב של הגב עובד. אין עוגן גבוה? Straight-Arm Pulldown בישיבה.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=band+lat+pulldown+home" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">3</span>
+        <div class="exercise-name">חתירה בגומייה בישיבה<span class="badge">גומייה</span><span class="en">Seated Band Row</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את חתירת הכבל.</strong> יושבים, גומייה סביב כפות הרגליים, מושכים לבטן, מרפקים צמודים לגוף, מועכים שכמות בסוף. גב ישר, בלי להתנדנד. עצור שנייה בכיווץ.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=seated+resistance+band+row" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">4</span>
+        <div class="exercise-name">פייס-פול בגומייה<span class="badge">גומייה</span><span class="en">Band Face Pull</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15–20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>בריאות כתף + כתף אחורית.</strong> עוגן בגובה פנים, מושכים לכיוון המצח, מרפקים גבוהים, פותחים את הידיים החוצה בסוף. חשוב במיוחד אחרי הרבה ישיבה בטיסות ובאוטובוסים.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=band+face+pull+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">5</span>
+        <div class="exercise-name">כפיפת מרפקים בגומייה<span class="badge">ביצפס</span><span class="en">Band Biceps Curl</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את הביצפס עם DB.</strong> דורכים על הגומייה, מרפקים צמודים לגוף, מכופפים עד למעלה, יורדים 3 שניות. בלי תנופה מהגב. הגומייה נותנת כיווץ מקסימלי בסוף — נצל אותו.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=resistance+band+bicep+curl" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise core">
+      <div class="exercise-header">
+        <span class="exercise-number">6</span>
+        <div class="exercise-name">הרמות רגליים / Reverse Crunch<span class="badge core">ליבה</span><span class="en">Leg Raises</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12–15</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>הבטן התחתונה.</strong> שוכבים, ידיים מתחת לישבן, מרימים רגלים ישרות עד 90° ומורידים לאט בלי לגעת ברצפה. קשה? כופפו ברכיים (Reverse Crunch). גב תחתון צמוד לרצפה כל הזמן.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=lying+leg+raises+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+  </section>
+
+  <!-- WORKOUT C -->
+  <section id="workout-c">
+    <h2>💪 אימון C · רגליים + ליבה</h2>
+    <div class="workout-meta">
+      <span class="chip primary">3 סבבים · 25–35 דק'</span>
+      <span class="chip">מנוחה 60–90 שנ'</span>
+      <span class="chip warning">מקביל ל-Legs המקורי</span>
+      <span class="chip success">RIR 1–2</span>
+    </div>
+    <p style="font-size:13px;color:var(--gray-500);">🏋️ <strong>יש חדר כושר?</strong> עשה את ה-Legs הרגיל: סקוואט, RDL, לחיצת רגליים, שוקיים, ליבה — RIR 2–3. אחרת — הגרסה הזו. <strong>ויום מסלול כבד (סיגירייה/הרי התה) מחליף את האימון הזה לגמרי.</strong></p>
+
+    <h3 style="color:var(--orange);">🔥 חימום (4 דק')</h3>
+    <div class="callout">
+      <ul>
+        <li>סקוואט משקל גוף איטי — 10</li>
+        <li>Leg Swings קדימה-אחורה + הצידה — 10 לכל רגל</li>
+        <li>Glute Bridge — 12</li>
+      </ul>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">1</span>
+        <div class="exercise-name">סקוואט (משקל גוף / גומייה)<span class="badge">גומייה</span><span class="en">Tempo Squat / Band Goblet Squat</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15–20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את הסקוואט.</strong> משקל גוף בטמפו איטי (3 שניות בירידה, עצירה בתחתית) — או גומייה מתחת לרגליים והידיות על הכתפיים לעומס נוסף. ברכיים בכיוון האצבעות, גב ישר, יורדים עמוק. הטמפו האיטי הוא מה שמחליף את ה-60 ק"ג.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=tempo+bodyweight+squat+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">2</span>
+        <div class="exercise-name">לאנג'ים הליכתיים<span class="badge">משקל גוף</span><span class="en">Walking Lunges</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">12 / רגל</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1–2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>ארבע ראשי + ישבן חד-צדדי.</strong> צעד גדול קדימה, ברך אחורית כמעט נוגעת ברצפה, גב זקוף. רוצה יותר? החזק את הגומייה מקופלת בידיים. מצוין גם על החוף/דשא.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=walking+lunges+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise trx">
+      <div class="exercise-header">
+        <span class="exercise-number">3</span>
+        <div class="exercise-name">Single-Leg RDL (משקל גוף / גומייה)<span class="badge trx">ירך אחורית</span><span class="en">Single-Leg RDL</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">10 / רגל</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 2</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>שומר על דפוס ה-RDL שבנית (70 ק"ג).</strong> עומדים על רגל אחת, מטים גב ישר קדימה תוך הרמת הרגל השנייה לאחור, מרגישים מתיחה בירך האחורית, חוזרים. גומייה מתחת לרגל התומכת = עומס נוסף. TRX ליד לאיזון.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=single+leg+RDL+bodyweight+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">4</span>
+        <div class="exercise-name">Glute Bridge / Hip Thrust בגומייה<span class="badge">ישבן</span><span class="en">Banded Glute Bridge</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15–20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>ישבן + שרשרת אחורית.</strong> שוכבים, ברכיים כפופות, גומייה סביב הירכיים (או מקופלת על האגן), דוחפים אגן למעלה, מכווצים ישבן חזק בסוף ומחזיקים שנייה. הבסיס להגנה על הגב התחתון.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=banded+glute+bridge+form" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise band">
+      <div class="exercise-header">
+        <span class="exercise-number">5</span>
+        <div class="exercise-name">כפיפת ברך בגומייה + שוקיים<span class="badge">ירך אחורית/שוק</span><span class="en">Band Leg Curl + Calf Raise</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15 + 20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>Leg Curl:</strong> שוכבים על הבטן, גומייה עוגנת נמוך סביב הקרסול, מכופפים ברך נגד ההתנגדות. <strong>שוקיים:</strong> עמידה על קצות אצבעות, עלייה מלאה ועצירה למעלה, 20 חזרות. אפשר על מדרגה במלון.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=resistance+band+leg+curl+prone" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+
+    <div class="exercise core">
+      <div class="exercise-header">
+        <span class="exercise-number">6</span>
+        <div class="exercise-name">קראנץ' בגומייה / פלאנק<span class="badge core">ליבה</span><span class="en">Band Crunch / Plank</span></div>
+      </div>
+      <div class="exercise-stats">
+        <div class="stat"><div class="label">סבבים</div><div class="value">3</div></div>
+        <div class="stat"><div class="label">חזרות</div><div class="value">15–20</div></div>
+        <div class="stat"><div class="label">עצימות</div><div class="value">RIR 1</div></div>
+      </div>
+      <div class="exercise-cues">
+        <strong>מחליף את ה-Cable Crunch.</strong> ברכיים, גומייה עוגנת גבוה מאחור, ידיים ליד הראש, מכופפים את פלג הגוף העליון קדימה-מטה נגד ההתנגדות. אין עוגן? פלאנק 2 × 90 שנ'.
+      </div>
+      <a class="demo-button" href="https://www.youtube.com/results?search_query=kneeling+band+crunch+abs" target="_blank"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>הדגמה</a>
+    </div>
+  </section>
+
+  <!-- FOOD -->
+  <section id="food">
+    <h2>🍛 תזונה + הליכה — 5 עוגנים</h2>
+    <p>לא סופרים קלוריות בחופשה. במקום — 5 כללים פשוטים שמחזיקים אותך בתחזוקה בלי לגזול הנאה. היעד: לחזור ב-23/8 עם עד +1 ק"ג (שרובו מים), בלי לאבד כוח.</p>
+
+    <div class="callout green">
+      <ul>
+        <li><strong>1. חלבון בכל ארוחה.</strong> בסרי לנקה קל: ביצים בבוקר, עוף/דגים/פירות ים בצהריים ובערב, דאל (עדשים) כתוספת חלבון בכל קארי. מנה = גודל כף היד לפחות.</li>
+        <li><strong>2. כלל הצלחת האחת בבופה.</strong> סיבוב סיור מלא <em>לפני</em> שלוקחים, ואז צלחת אחת מורכבת טוב. חוזרים לחלבון וירקות — לא לאורז ולמטוגנים.</li>
+        <li><strong>3. אורז — תוספת, לא בסיס.</strong> הפוך את היחס: הרבה קארי ירקות + דאל + חלבון, רבע צלחת אורז. Kottu / Hoppers — מנה אחת, לא כל יום.</li>
+        <li><strong>4. שתייה = המלכודת האמיתית.</strong> מיצים, לאסי, קוקטיילים — 200–400 קק"ל ולא משביעים. ברירת מחדל: מים / סודה / תה מקומי. מיץ או קוקטייל — אחד ביום, את הטעים באמת. בירה — עד 2 בערב.</li>
+        <li><strong>5. פרי במקום קינוח.</strong> מנגו, פפאיה, אננס שם ברמה אחרת. קינוח "אמיתי" — פעמיים בשבוע, כשזה שווה.</li>
+      </ul>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— יואב, דרך יאיר</p>
+    </div>
+
+    <div class="callout">
+      <h4>👟 תנועה — החלק הכי קל בסרי לנקה</h4>
+      <p>מסלולים, מקדשים, חופים — <strong>יעד: 12,000+ צעדים ביום</strong> (יותר מבבית, כי אין ישיבה מול מחשב). הכוח האירובי שבנית הופך את המסלולים מסבל להנאה. יום מסלול רציני = אימון רגליים מלא.</p>
+    </div>
+  </section>
+
+  <!-- PACKING -->
+  <section id="pack">
+    <h2>🎒 מה לארוז</h2>
+    <div class="callout orange">
+      <ul>
+        <li><strong>גומיית דקטלון</strong> — הפותרת המרכזית, שוקלת כלום. ✓ יש לך</li>
+        <li><strong>רצועות TRX</strong> — נתלות על כל דלת/עץ/מעקה. ✓ יש לך</li>
+        <li>נעלי ספורט נוחות להליכה ארוכה (המסלולים שם ארוכים).</li>
+        <li>2 חולצות אימון מנדפות + בגד ים — מכבסים במלון.</li>
+        <li><em>לא לארוז: משקל נייד, אבקת חלבון בכמויות, רגשות אשם.</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHECK-IN -->
+  <section id="checkin">
+    <h2>✅ החזרה — צ'ק-אין 24/8</h2>
+    <div class="callout purple">
+      <h4>🧠 ההסכם המנטלי</h4>
+      <p>אתה לא "יוצא מהתוכנית" ל-3 שבועות — אתה עובר למצב אחר של אותה תוכנית. מי ש"יוצא" צריך אחר כך "לחזור", וזו המשוכה שרוב האנשים נופלים בה. אתה פשוט חוזר למצב הקודם כשנוחתים. <strong>ב-24/8 צ'ק-אין רגיל, כאילו כלום.</strong> בלי "שבוע ניקוי", בלי כפרות. השיאים 60/60/70 מחכים בבנק.</p>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:4px;">— דניאל, דרך יאיר</p>
+    </div>
+
+    <h3>משימות</h3>
+    <ul class="checklist">
+      <li><div class="check"></div><div class="content"><div class="title">📸 להוריד/לצלם את הדף הזה לנייד</div><div class="desc">לפני הטיסה — לא תמיד יהיה אינטרנט בסרי לנקה.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">🎒 לוודא גומייה + TRX במזוודה</div><div class="desc">הציוד היחיד שחשוב באמת.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">📏 בדיקת חגורה שבועית</div><div class="desc">אותו חור, בוקר. זה המדד היחיד — אין משקל.</div></div></li>
+      <li><div class="check"></div><div class="content"><div class="title">💬 צ'ק-אין ליאיר — 24/8</div><div class="desc">התבנית: <strong>"משקל: __ | בטן: __ | מותן: __ | אנרגיה: _/10 | שינה: _ שעות | כמה אימונים עשית: _ | איך היה: __"</strong> ונמשיך בדיוק מהשיאים.</div></div></li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <strong>מצב חופשה · סרי לנקה · 1–22 באוגוסט 2026</strong><br>
+    יאיר אבני, מאמן ראשי · התייעצות פנימית: עמית (3 אימוני גומייה+TRX מקבילים ל-A/B/C, הסתעפות חדר-כושר, RIR-based), יואב (5 עוגני תזונה), דניאל (הסכם מנטלי, מדידת חגורה)<br>
+    <a href="../index.html" style="color:var(--orange);font-weight:700;">← חזרה לדף הבית</a> · <a href="week12.html" style="color:var(--navy);font-weight:700;">התוכנית לפני הטיסה (שבוע 12)</a>
+  </div>
+
+</div>
+
+</body>
+</html>
